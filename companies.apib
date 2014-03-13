@@ -16,7 +16,7 @@ This is an Admin-Only endpoint except for GET.
         [
             {
                 modified_by: null
-                name: "???? iDigiFun Inc."
+                name: "Company 1"
                 created_at: "2014-03-13T19:58:38+00:00"
                 updated_at: "2014-03-13T19:58:38+00:00"
                 class: "Company"
@@ -26,7 +26,7 @@ This is an Admin-Only endpoint except for GET.
             },
             {
                 modified_by: null
-                name: "[x]cube LABS"
+                name: "Company 2"
                 created_at: "2014-03-13T19:58:38+00:00"
                 updated_at: "2014-03-13T19:58:38+00:00"
                 class: "Company"
@@ -35,41 +35,14 @@ This is an Admin-Only endpoint except for GET.
                 id: 2
             }
         ]  
-### Update A User [PATCH]
 
-+ Request (application/json)
-
-        {
-            first_name: "No Longer A"
-        }
-+ Response 200 (application/json)
-
-        {
-            username: "vungle"
-            first_name: "No Longer A"
-            last_name: "Computer"
-            modified_by: 1
-            created_at: "2014-03-12T16:29:48+00:00"
-            updated_at: "2014-03-12T16:33:48+00:00"
-            class: "User"
-            version: 2
-            is_admin: true
-            id: 1
-        }   
-
-
-## Users Create [/users]
-### Create a User [POST]
+## Companies Create [/companies]
+### Create a Company [POST]
 + Request (application/json)
 
     
         {
-            username: "vungle"
-            first_name: "I'm a"
-            last_name: "Computer"
-            is_admin: true
-            password: "my password"
-
+            name: "vungle"
         }
 
         
@@ -77,43 +50,36 @@ This is an Admin-Only endpoint except for GET.
 + Response 200 (application/json)
 
         {
-            username: "vungle"
-            first_name: "I'm a"
-            last_name: "Computer"
             modified_by: null
-            created_at: "2014-03-12T15:48:36+00:00"
-            updated_at: "2014-03-12T15:48:36+00:00"
-            class: "User"
+            name: "vungle"
+            created_at: "2014-03-13T19:58:38+00:00"
+            updated_at: "2014-03-13T19:58:38+00:00"
+            class: "Company"
             version: 1
-            is_admin: true
-            id: 4
+            modifier: null
+            id: 2
         }
 
-## User [/users/id?include=includes]
-Get a single User object 
+## Company [/companies/id?include=includes]
+Get a single Company object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `demandAccounts`, `demandAccounts_proxy`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, or `all`
 
-### Retrieve a User [GET]
+### Retrieve a single Company [GET]
 + Response 200 (application/json)
 
     + Body
 
             {
-                username: "vungle"
-                first_name: "I'm a"
-                last_name: "Computer"
                 modified_by: null
-                created_at: "2014-03-12T16:29:48+00:00"
-                demandAccounts: { }
-                updated_at: "2014-03-12T16:29:48+00:00"
-                class: "User"
+                name: "vungle"
+                created_at: "2014-03-13T19:58:38+00:00"
+                updated_at: "2014-03-13T19:58:38+00:00"
+                class: "Company"
                 version: 1
-                is_admin: true
-                demandAccounts_proxy: { }
                 modifier: null
-                id: 1
+                id: 2
             }
             
 ### Update A User [PATCH]
@@ -121,25 +87,22 @@ Get a single User object
 + Request (application/json)
 
         {
-            first_name: "No Longer A"
+            name: "Vungly Vungle"
         }
 + Response 200 (application/json)
 
         {
-            username: "vungle"
-            first_name: "No Longer A"
-            last_name: "Computer"
+            name: "Vungly Vungle"
             modified_by: 1
             created_at: "2014-03-12T16:29:48+00:00"
             updated_at: "2014-03-12T16:33:48+00:00"
-            class: "User"
+            class: "Company"
             version: 2
-            is_admin: true
             id: 1
         }   
 
-##  Delete a User [/users/id]
-### Remove a User [DELETE]
+##  Delete a Company [/companies/id]
+### Remove a Company [DELETE]
 + Response 200
 
 
