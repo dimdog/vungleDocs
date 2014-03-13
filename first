@@ -1,0 +1,406 @@
+FORMAT: 1A
+HOST: http://www.live.vungle.com/api/v1
+
+# Account Structure V1
+The Account Structure API provides all the functionality of the Vungle Dashboard, but through a RESTful api interface.
+
+# Group Auth
+## Logging in [/login]
+
+### Logging in! [POST]
++ Request (application/json)
+
+    
+        {
+            username: "vungle"
+            password: "my password"
+
+        }
+
++ Response 200 (application/json)
+
+        {
+            username: "vungle"
+            first_name: "I'm a"
+            last_name: "Computer"
+            modified_by: null
+            created_at: "2014-03-12T15:48:36+00:00"
+            updated_at: "2014-03-12T15:48:36+00:00"
+            class: "User"
+            version: 1
+            is_admin: true
+            id: 4
+        }
+        
+## Logging out [/logout]
+
+### Logging out! [GET]
++ Response 200
+
+# Group DemandAccount
+DemandAccounts, also known as Advertiser Accounts, are the top level model on the Demand side of the Account Structure. They can be either Master accounts, sub-accounts, or agency accounts. 
+## Demand Accounts Collection [/demandAccounts?include=includes&limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children` or `all`
+
+### List all Demand Accounts [GET]
++ Response 200 (application/json)
+
+        [
+            {
+                geo_targetting: true
+                mailing_address: "My Mailing Address"
+                updated_at: "2014-03-12T20:48:32+00:00"
+                is_agency: false
+                billing_phone: "3149355555"
+                mailing_email: "email@mailing.com"
+                modified_by: null
+                is_rtb: true
+                billing_email: "email@billing.com"
+                company_id: null
+                id: 1
+                parent_id: null
+                version: 1
+                billing_address: "My Billing Address"
+                category_restriction: false
+                agency_id: null
+                approved_credit: 1000
+                class: "DemandAccount"
+                age_restriction: true
+                mailing_phone: "2124843915"
+                name: "Vungle"
+                created_at: "2014-03-12T20:48:32+00:00"
+                spent_credit: 500
+                modifier: null
+            },
+            {
+                geo_targetting: false
+                mailing_address: "Need a value"
+                updated_at: "2014-03-12T20:48:32+00:00"
+                is_agency: false
+                billing_phone: "13123123"
+                mailing_email: "valid@asd.com"
+                modified_by: null
+                is_rtb: null
+                billing_email: "validated@validated.co.uk"
+                company_id: null
+                id: 2
+                parent_id: null
+                version: 1
+                billing_address: "bonk"
+                category_restriction: false
+                agency_id: null
+                approved_credit: null
+                class: "DemandAccount"
+                age_restriction: false
+                mailing_phone: "53453252"
+                name: "Vungle 2"
+                created_at: "2014-03-12T20:48:32+00:00"
+                spent_credit: null
+                modifier: null
+            }
+        ]
+
+## Demand Accounts Create [/demandAccounts]
+### Create a Demand Accounts [POST]
++ Request (application/json)
+
+    
+        {
+            geo_targetting: true
+            mailing_address: "My Mailing Address"
+            is_agency: false
+            billing_phone: "3149355555"
+            mailing_email: "email@mailing.com"
+            is_rtb: true
+            billing_email: "email@billing.com"
+            company: null
+            id: 1
+            parent: null
+            billing_address: "My Billing Address"
+            category_restriction: false
+            agency: null
+            approved_credit: 1000
+            age_restriction: true
+            mailing_phone: "2124843915"
+            name: "Vungle"
+            spent_credit: 500
+            modifier: null
+        }
+        
++ Response 200 (application/json)
+
+        {
+            geo_targetting: true
+            mailing_address: "My Mailing Address"
+            updated_at: "2014-03-12T20:48:32+00:00"
+            is_agency: false
+            billing_phone: "3149355555"
+            mailing_email: "email@mailing.com"
+            modified_by: null
+            is_rtb: true
+            billing_email: "email@billing.com"
+            company_id: null
+            id: 1
+            parent_id: null
+            version: 1
+            billing_address: "My Billing Address"
+            category_restriction: false
+            agency_id: null
+            approved_credit: 1000
+            class: "DemandAccount"
+            age_restriction: true
+            mailing_phone: "2124843915"
+            name: "Vungle"
+            created_at: "2014-03-12T20:48:32+00:00"
+            spent_credit: 500
+            modifier: null
+        }
+
+## DemandAccounts [/demandAccounts/id?include=includes&limit=limit]
+Get a single DemandAccount object 
+
++ Parameters  
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children` or `all`
+
+### Get a single Demand Account [GET]
++ Response 200 (application/json)
+    
+    + Body
+    
+            {
+                geo_targetting: true
+                mailing_address: "My Mailing Address"
+                updated_at: "2014-03-12T20:48:32+00:00"
+                is_agency: false
+                billing_phone: "3149355555"
+                mailing_email: "email@mailing.com"
+                modified_by: null
+                is_rtb: true
+                billing_email: "email@billing.com"
+                agency: null
+                company_id: null
+                id: 1
+                parent_id: null
+                version: 1
+                billing_address: "My Billing Address"
+                parent: null
+                company: null
+                category_restriction: false
+                agency_id: null
+                approved_credit: 1000
+                class: "DemandAccount"
+                age_restriction: true
+                mailing_phone: "2124843915"
+                name: "Vungle"
+                created_at: "2014-03-12T20:48:32+00:00"
+                spent_credit: 500
+                modifier: null
+            }
+
+### Update a DemandAccount [PATCH]
++ Request (application/json)
+
+        {
+            geo_targetting : false
+        }
+
++ Response 200 (application/json)
+    
+    + Body
+    
+            {
+                geo_targetting: false
+                ISULists: { }
+                videos: { }
+                mailing_address: "My Mailing Address"
+                users_proxy: { }
+                updated_at: "2014-03-12T20:48:32+00:00"
+                is_agency: false
+                billing_phone: "3149355555"
+                mailing_email: "email@mailing.com"
+                adUnits: { }
+                modified_by: null
+                is_rtb: true
+                billing_email: "email@billing.com"
+                SiteIDLists: { }
+                agency: null
+                company_id: null
+                geoGroups: { }
+                id: 1
+                parent_id: null
+                version: 1
+                postRolls: { }
+                tpatGroups: { }
+                billing_address: "My Billing Address"
+                users: { }
+                parent: null
+                company: null
+                category_restriction: false
+                videos_proxy: { }
+                agency_id: null
+                campaigns: { }
+                approved_credit: 1000
+                class: "DemandAccount"
+                age_restriction: true
+                mailing_phone: "2124843915"
+                name: "Vungle"
+                created_at: "2014-03-12T20:48:32+00:00"
+                children: { }
+                spent_credit: 500
+                preRolls: { }
+                postRolls_proxy: { }
+                demandAccounts: { }
+                modifier: null
+                preRolls_proxy: { }
+            }
+
+
+##  Delete a DemandAccount [/demandAccounts/id]
+### Remove a DemandAccount [DELETE]
++ Response 200
+
+# Group User
+Users! This is an Admin-Only endpoint except for PATCH to yourself.
+
+`is_admin` specifies if the user is a global admin.
+
+`demandAccounts` are the demandAccounts this user is linked to.
+
+`demandAccounts_proxy` are the permissions the user has against those demandAccounts.
+## Users Collection [/users?include=includes&limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `demandAccounts`, `demandAccounts_proxy`, or `all`
+
+### Retrieve a User [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                username: "vungle"
+                first_name: "I'm a"
+                last_name: "Computer"
+                modified_by: null
+                created_at: "2014-03-12T16:29:48+00:00"
+                demandAccounts: { }
+                updated_at: "2014-03-12T16:29:48+00:00"
+                class: "User"
+                version: 1
+                is_admin: true
+                demandAccounts_proxy: { }
+                modifier: null
+                id: 1
+            }
+            
+### Update A User [PATCH]
+
++ Request (application/json)
+
+        {
+            first_name: "No Longer A"
+        }
++ Response 200 (application/json)
+
+        {
+            username: "vungle"
+            first_name: "No Longer A"
+            last_name: "Computer"
+            modified_by: 1
+            created_at: "2014-03-12T16:29:48+00:00"
+            updated_at: "2014-03-12T16:33:48+00:00"
+            class: "User"
+            version: 2
+            is_admin: true
+            id: 1
+        }   
+
+
+## Users Create [/users]
+### Create a User [POST]
++ Request (application/json)
+
+    
+        {
+            username: "vungle"
+            first_name: "I'm a"
+            last_name: "Computer"
+            is_admin: true
+            password: "my password"
+
+        }
+
+        
+
++ Response 200 (application/json)
+
+        {
+            username: "vungle"
+            first_name: "I'm a"
+            last_name: "Computer"
+            modified_by: null
+            created_at: "2014-03-12T15:48:36+00:00"
+            updated_at: "2014-03-12T15:48:36+00:00"
+            class: "User"
+            version: 1
+            is_admin: true
+            id: 4
+        }
+
+## User [/users/id?include=includes]
+Get a single User object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `demandAccounts`, `demandAccounts_proxy`, or `all`
+
+### Retrieve a User [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                username: "vungle"
+                first_name: "I'm a"
+                last_name: "Computer"
+                modified_by: null
+                created_at: "2014-03-12T16:29:48+00:00"
+                demandAccounts: { }
+                updated_at: "2014-03-12T16:29:48+00:00"
+                class: "User"
+                version: 1
+                is_admin: true
+                demandAccounts_proxy: { }
+                modifier: null
+                id: 1
+            }
+            
+### Update A User [PATCH]
+
++ Request (application/json)
+
+        {
+            first_name: "No Longer A"
+        }
++ Response 200 (application/json)
+
+        {
+            username: "vungle"
+            first_name: "No Longer A"
+            last_name: "Computer"
+            modified_by: 1
+            created_at: "2014-03-12T16:29:48+00:00"
+            updated_at: "2014-03-12T16:33:48+00:00"
+            class: "User"
+            version: 2
+            is_admin: true
+            id: 1
+        }   
+
+##  Delete a User [/users/id]
+### Remove a User [DELETE]
++ Response 200
+
+
