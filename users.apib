@@ -15,7 +15,8 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
 + Response 200 (application/json)
 
     + Body
-
+          
+        [
             {
                 username: "vungle"
                 first_name: "I'm a"
@@ -30,29 +31,25 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
                 demandAccounts_proxy: { }
                 modifier: null
                 id: 1
+            },
+            {
+                username: "rock"
+                first_name: "I'm a"
+                last_name: "Rock"
+                modified_by: null
+                created_at: "2014-03-12T16:29:48+00:00"
+                demandAccounts: { }
+                updated_at: "2014-03-12T16:29:48+00:00"
+                class: "User"
+                version: 1
+                is_admin: true
+                demandAccounts_proxy: { }
+                modifier: null
+                id: 2
             }
+
+        ]
             
-### Update A User [PATCH]
-
-+ Request (application/json)
-
-        {
-            first_name: "No Longer A"
-        }
-+ Response 200 (application/json)
-
-        {
-            username: "vungle"
-            first_name: "No Longer A"
-            last_name: "Computer"
-            modified_by: 1
-            created_at: "2014-03-12T16:29:48+00:00"
-            updated_at: "2014-03-12T16:33:48+00:00"
-            class: "User"
-            version: 2
-            is_admin: true
-            id: 1
-        }   
 
 
 ## Users Create [/users]
