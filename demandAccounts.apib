@@ -1,42 +1,3 @@
-FORMAT: 1A
-HOST: http://www.live.vungle.com/api/v1
-
-# Account Structure V1
-The Account Structure API provides all the functionality of the Vungle Dashboard, but through a RESTful api interface.
-
-# Group Auth
-## Logging in [/login]
-
-### Logging in! [POST]
-+ Request (application/json)
-
-    
-        {
-            username: "vungle"
-            password: "my password"
-
-        }
-
-+ Response 200 (application/json)
-
-        {
-            username: "vungle"
-            first_name: "I'm a"
-            last_name: "Computer"
-            modified_by: null
-            created_at: "2014-03-12T15:48:36+00:00"
-            updated_at: "2014-03-12T15:48:36+00:00"
-            class: "User"
-            version: 1
-            is_admin: true
-            id: 4
-        }
-        
-## Logging out [/logout]
-
-### Logging out! [GET]
-+ Response 200
-
 # Group DemandAccount
 DemandAccounts, also known as Advertiser Accounts, are the top level model on the Demand side of the Account Structure. They can be either Master accounts, sub-accounts, or agency accounts. 
 ## Demand Accounts Collection [/demandAccounts?include=includes&limit=limit]
@@ -402,5 +363,6 @@ Get a single User object
 ##  Delete a User [/users/id]
 ### Remove a User [DELETE]
 + Response 200
+
 
 
