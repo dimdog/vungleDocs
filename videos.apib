@@ -1,13 +1,12 @@
-# Group Company 
-Companies! 
-This is an Admin-Only endpoint except for GET.
+# Group Video
+Videos! This is a somewhat complicated, First you post a create with a name, then you upload the video to our S3 bucket with the format bucket:/id/name 
 
-## Companies Collection [/companies?include=includes&limit=limit]
+## Videos Collection [/companies?include=includes&limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'demandAccounts'`) ... `includes` The relations that you want returned as part of the object. Options are: `demandAccounts`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, or `all`
 
-### Retrieve all Companies [GET]
+### Retrieve all Videos [GET]
 
 + Response 200 (application/json)
 
@@ -16,28 +15,28 @@ This is an Admin-Only endpoint except for GET.
         [
             {
                 modified_by: null
-                name: "Company 1"
+                name: "Video 1"
                 created_at: "2014-03-13T19:58:38+00:00"
                 updated_at: "2014-03-13T19:58:38+00:00"
-                class: "Company"
+                class: "Video"
                 version: 1
                 modifier: null
                 id: 1
             },
             {
                 modified_by: null
-                name: "Company 2"
+                name: "Video 2"
                 created_at: "2014-03-13T19:58:38+00:00"
                 updated_at: "2014-03-13T19:58:38+00:00"
-                class: "Company"
+                class: "Video"
                 version: 1
                 modifier: null
                 id: 2
             }
         ]  
 
-## Companies Create [/companies]
-### Create a Company [POST]
+## Videos Create [/companies]
+### Create a Video [POST]
 + Request (application/json)
 
     
@@ -54,19 +53,19 @@ This is an Admin-Only endpoint except for GET.
             name: "vungle"
             created_at: "2014-03-13T19:58:38+00:00"
             updated_at: "2014-03-13T19:58:38+00:00"
-            class: "Company"
+            class: "Video"
             version: 1
             modifier: null
             id: 2
         }
 
-## Company [/companies/id?include=includes]
-Get a single Company object 
+## Video [/companies/id?include=includes]
+Get a single Video object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-    + includes (optional, string, `'demandAccounts'`) ... `includes` The relations that you want returned as part of the object. Options are: `demandAccounts`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, or `all`
 
-### Retrieve a single Company [GET]
+### Retrieve a single Video [GET]
 + Response 200 (application/json)
 
     + Body
@@ -76,13 +75,13 @@ Get a single Company object
                 name: "vungle"
                 created_at: "2014-03-13T19:58:38+00:00"
                 updated_at: "2014-03-13T19:58:38+00:00"
-                class: "Company"
+                class: "Video"
                 version: 1
                 modifier: null
                 id: 2
             }
             
-### Update A Company [PATCH]
+### Update A Video [PATCH]
 
 + Request (application/json)
 
@@ -96,13 +95,13 @@ Get a single Company object
             modified_by: 1
             created_at: "2014-03-12T16:29:48+00:00"
             updated_at: "2014-03-12T16:33:48+00:00"
-            class: "Company"
+            class: "Video"
             version: 2
             id: 1
         }   
 
-##  Delete a Company [/companies/id]
-### Remove a Company [DELETE]
+##  Delete a Video [/companies/id]
+### Remove a Video [DELETE]
 + Response 200
 
 
