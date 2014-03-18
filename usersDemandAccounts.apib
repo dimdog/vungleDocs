@@ -50,7 +50,7 @@ The relationships between Users and DemandAccounts are defined here.
 ## User [/users/id/demandAccounts/id]
 Modify the Relation between a User and a DemandAccount 
 
-### Retrieve a the specific relationship between a User and a DemandAccount[GET]
+### Retrieve the specific relationship between a User and a DemandAccount[GET]
 + Response 200 (application/json)
 
     + Body
@@ -72,30 +72,34 @@ Modify the Relation between a User and a DemandAccount
           write: True
           }
         
-### Update A User [PATCH]
+### Update the relationship [PATCH]
 
 + Request (application/json)
 
         {
-            first_name: "No Longer A"
+            financial_write: True
         }
 + Response 200 (application/json)
 
         {
-            username: "vungle"
-            first_name: "No Longer A"
-            last_name: "Computer"
-            modified_by: 1
-            created_at: "2014-03-12T16:29:48+00:00"
-            updated_at: "2014-03-12T16:33:48+00:00"
-            class: "User"
-            version: 2
-            is_admin: true
-            id: 1
-        }   
+            class: 'UserDemandAccounts'
+            created_at: '2014-03-18T19:41:58+00:00'
+            demandAccount_id: 2L
+            financial_read: True
+            financial_write: False
+            manager: False
+            modified_by: None
+            modifier: None
+            read: False
+            reports_read: False
+            updated_at: '2014-03-18T19:41:58+00:00'
+            user_id: 1L
+            version: 1L
+            write: True
+        }
 
-##  Delete a User [/users/id]
-### Remove a User [DELETE]
+##  Delete the relationship between a User and a DemandAccount [/users/id]
+### Remove the relationship [DELETE]
 + Response 200
 
 
