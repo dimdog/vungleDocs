@@ -5,7 +5,7 @@ The relationships between Users and DemandAccounts are defined here.
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
 
-### Retrieve all Users [GET]
+### Retrieve all relations a given user has with DemandAccounts [GET]
 + Response 200 (application/json)
 
     + Body
@@ -47,65 +47,31 @@ The relationships between Users and DemandAccounts are defined here.
          } 
                     
 
-
-## Users Create [/users]
-### Create a User [POST]
-+ Request (application/json)
-
-    
-        {
-            username: "vungle"
-            first_name: "I'm a"
-            last_name: "Computer"
-            is_admin: true
-            password: "my password"
-
-        }
-
-        
-
-+ Response 200 (application/json)
-
-        {
-            username: "vungle"
-            first_name: "I'm a"
-            last_name: "Computer"
-            modified_by: null
-            created_at: "2014-03-12T15:48:36+00:00"
-            updated_at: "2014-03-12T15:48:36+00:00"
-            class: "User"
-            version: 1
-            is_admin: true
-            id: 4
-        }
-
-## User [/users/id?include=includes]
-Get a single User object 
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `demandAccounts`, `demandAccounts_proxy`, or `all`
+## User [/users/id/demandAccounts/id]
+Get the relation between a User and a DemandAccount 
 
 ### Retrieve a User [GET]
 + Response 200 (application/json)
 
     + Body
 
-            {
-                username: "vungle"
-                first_name: "I'm a"
-                last_name: "Computer"
-                modified_by: null
-                created_at: "2014-03-12T16:29:48+00:00"
-                demandAccounts: { }
-                updated_at: "2014-03-12T16:29:48+00:00"
-                class: "User"
-                version: 1
-                is_admin: true
-                demandAccounts_proxy: { }
-                modifier: null
-                id: 1
-            }
-            
+          {
+          class: 'UserDemandAccounts'
+          created_at: '2014-03-18T19:41:58+00:00'
+          demandAccount_id: 2L
+          financial_read: True
+          financial_write: False
+          manager: False
+          modified_by: None
+          modifier: None
+          read: False
+          reports_read: False
+          updated_at: '2014-03-18T19:41:58+00:00'
+          user_id: 1L
+          version: 1L
+          write: True
+          }
+        
 ### Update A User [PATCH]
 
 + Request (application/json)
