@@ -2,4 +2,5 @@ auth.apib
 users.apib
 usersDemandAccounts.apib
 demandAccounts.apib
+demandAccountsCampaigns.apib
 companies.apib

@@ -1,0 +1,224 @@
+# Group DemandAccounts/Campaigns
+Campaigns are always a part of DemandAccounts, and contain adGroups. They also provide a large degree of targetting at a high level.
+## Demand Account Campaigns Collection [/demandAccounts/id/campaigns/?include=includes&limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`,`users_proxy or `all`
+
+### List all Campaigns associated with the Demand Account [GET]
++ Response 200 (application/json)
+
+        {
+          1L: 
+            {
+            'bid_strategy_id': 2L,
+            'budget': 10000L,
+            'budget_spent': 0L,
+            'categories_whitelisted': True,
+            'class': 'Campaign',
+            'connection_types_whitelisted': True,
+            'created_at': '2014-03-18T21:15:33+00:00',
+            'demand_account_id': 1L,
+            'devices_whitelisted': True,
+            'end_date': '2014-03-18T21:15:33+00:00',
+            'geo_groups_whitelisted': True,
+            'id': 1L,
+            'impression_cap': 1000L,
+            'impression_viewed': 0L,
+            'languages_whitelisted': True,
+            'modified_by': None,
+            'modifier': None,
+            'name': 'Campaign1',
+            'platform_versions_whitelisted': True,
+            'ratings_whitelisted': True,
+            'start_date': '2014-03-18T21:15:33+00:00',
+            'type': '1st Party',
+            'updated_at': '2014-03-18T21:15:33+00:00',
+            'version': 1L
+            }
+          2L: 
+            {
+            'bid_strategy_id': 2L,
+            'budget': 1000L,
+            'budget_spent': 500L,
+            'categories_whitelisted': True,
+            'class': 'Campaign',
+            'connection_types_whitelisted': True,
+            'created_at': '2014-03-18T21:15:33+00:00',
+            'demand_account_id': 1L,
+            'devices_whitelisted': True,
+            'end_date': '2014-03-18T21:15:33+00:00',
+            'geo_groups_whitelisted': True,
+            'id': 2L,
+            'impression_cap': 1000L,
+            'impression_viewed': 0L,
+            'languages_whitelisted': True,
+            'modified_by': None,
+            'modifier': None,
+            'name': 'Campaign1',
+            'platform_versions_whitelisted': True,
+            'ratings_whitelisted': True,
+            'start_date': '2014-03-18T21:15:33+00:00',
+            'type': '1st Party',
+            'updated_at': '2014-03-18T21:15:33+00:00',
+            'version': 1L
+            }
+        }
+        
+
+## Demand Accounts Create [/demandAccounts]
+### Create a Demand Accounts [POST]
++ Request (application/json)
+
+    
+        {
+            geo_targetting: true
+            mailing_address: "My Mailing Address"
+            is_agency: false
+            billing_phone: "3149355555"
+            mailing_email: "email@mailing.com"
+            is_rtb: true
+            billing_email: "email@billing.com"
+            company: null
+            id: 1
+            parent: null
+            billing_address: "My Billing Address"
+            category_restriction: false
+            agency: null
+            approved_credit: 1000
+            age_restriction: true
+            mailing_phone: "2124843915"
+            name: "Vungle"
+            spent_credit: 500
+            modifier: null
+        }
+        
++ Response 200 (application/json)
+
+        {
+            geo_targetting: true
+            mailing_address: "My Mailing Address"
+            updated_at: "2014-03-12T20:48:32+00:00"
+            is_agency: false
+            billing_phone: "3149355555"
+            mailing_email: "email@mailing.com"
+            modified_by: null
+            is_rtb: true
+            billing_email: "email@billing.com"
+            company_id: null
+            id: 1
+            parent_id: null
+            version: 1
+            billing_address: "My Billing Address"
+            category_restriction: false
+            agency_id: null
+            approved_credit: 1000
+            class: "DemandAccount"
+            age_restriction: true
+            mailing_phone: "2124843915"
+            name: "Vungle"
+            created_at: "2014-03-12T20:48:32+00:00"
+            spent_credit: 500
+            modifier: null
+        }
+
+## DemandAccounts [/demandAccounts/id?include=includes&limit=limit]
+Get a single DemandAccount object 
+
++ Parameters  
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`,`users_proxy or `all`
+
+### Get a single Demand Account [GET]
++ Response 200 (application/json)
+    
+    + Body
+    
+            {
+                geo_targetting: true
+                mailing_address: "My Mailing Address"
+                updated_at: "2014-03-12T20:48:32+00:00"
+                is_agency: false
+                billing_phone: "3149355555"
+                mailing_email: "email@mailing.com"
+                modified_by: null
+                is_rtb: true
+                billing_email: "email@billing.com"
+                agency: null
+                company_id: null
+                id: 1
+                parent_id: null
+                version: 1
+                billing_address: "My Billing Address"
+                parent: null
+                company: null
+                category_restriction: false
+                agency_id: null
+                approved_credit: 1000
+                class: "DemandAccount"
+                age_restriction: true
+                mailing_phone: "2124843915"
+                name: "Vungle"
+                created_at: "2014-03-12T20:48:32+00:00"
+                spent_credit: 500
+                modifier: null
+            }
+
+### Update a DemandAccount [PATCH]
++ Request (application/json)
+
+        {
+            geo_targetting : false
+        }
+
++ Response 200 (application/json)
+    
+    + Body
+    
+            {
+                geo_targetting: false
+                ISULists: { }
+                videos: { }
+                mailing_address: "My Mailing Address"
+                users_proxy: { }
+                updated_at: "2014-03-12T20:48:32+00:00"
+                is_agency: false
+                billing_phone: "3149355555"
+                mailing_email: "email@mailing.com"
+                adUnits: { }
+                modified_by: null
+                is_rtb: true
+                billing_email: "email@billing.com"
+                SiteIDLists: { }
+                agency: null
+                company_id: null
+                geoGroups: { }
+                id: 1
+                parent_id: null
+                version: 1
+                postRolls: { }
+                tpatGroups: { }
+                billing_address: "My Billing Address"
+                users: { }
+                parent: null
+                company: null
+                category_restriction: false
+                agency_id: null
+                campaigns: { }
+                approved_credit: 1000
+                class: "DemandAccount"
+                age_restriction: true
+                mailing_phone: "2124843915"
+                name: "Vungle"
+                created_at: "2014-03-12T20:48:32+00:00"
+                children: { }
+                spent_credit: 500
+                preRolls: { }
+                demandAccounts: { }
+                modifier: null
+            }
+
+
+##  Delete a DemandAccount [/demandAccounts/id]
+### Remove a DemandAccount [DELETE]
++ Response 200

@@ -8,18 +8,15 @@
 /users/:id/demandAccounts/ (GET)
 /users/:id/demandAccounts/:id (GET,POST,PATCH,DELETE)
 
-
-/demandAccounts/
-/demandAccounts/:id
-/demandAccounts/:id/campaigns
-/demandAccounts/:id/adUnits/
-/demandAccounts/:id/users/ <--Chopping block?
-/demandAccounts/:id/postRolls/
-/demandAccounts/:id/postRolls/:id
-/demandAccounts/:id/preRolls/
-/demandAccounts/:id/preRolls/:id
-/demandAccounts/:id/videos/
-/demandAccounts/:id/videos/:id
+/demandAccounts/ (GET, POST)
+/demandAccounts/:id (GET, PATCH, DELETE)
+----
+/demandAccounts/:id/campaigns (GET, POST)
+/demandAccounts/:id/adUnits/ (GET, POST)
+/demandAccounts/:id/users/ <--Chopping block? (Maybe not??) - use case = get all users associated with a DA
+/demandAccounts/:id/postRolls/ (GET, POST)
+/demandAccounts/:id/preRolls/ (GET, POST)
+/demandAccounts/:id/videos/ (GET, POST) 
 
 
 /campaigns/
