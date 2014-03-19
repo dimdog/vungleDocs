@@ -5,15 +5,14 @@
 
 /users/ (GET, POST)
 /users/:id (GET,PATCH,DELETE)
-/users/:id/demandAccounts/ (GET)
-/users/:id/demandAccounts/:id (GET,POST,PATCH,DELETE)
+/users/:id/demandAccounts/ (GET, POST)
+/users/:id/demandAccounts/:id (GET,POST,DELETE)
 
-/demandAccounts/ (GET, POST)
-/demandAccounts/:id (GET, PATCH, DELETE)
-----
+/demandAccounts/ (GET)
+/demandAccounts/:id (GET, DELETE)
+/demandAccounts/:id/users/ (GET, PATCH, POST, DELETE) 
 /demandAccounts/:id/campaigns (GET, POST)
 /demandAccounts/:id/adUnits/ (GET, POST)
-/demandAccounts/:id/users/ <--Chopping block? (Maybe not??) - use case = get all users associated with a DA
 /demandAccounts/:id/postRolls/ (GET, POST)
 /demandAccounts/:id/preRolls/ (GET, POST)
 /demandAccounts/:id/videos/ (GET, POST) 
