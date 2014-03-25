@@ -1,4 +1,6 @@
 auth.apib
 users.apib
 demandAccounts.apib
+bidStrategy.apib
 connectionTypes.apib
+

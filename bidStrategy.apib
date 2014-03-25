@@ -1,7 +1,7 @@
-# Group ConnectionType
-ConnectionTypes can be accessed here, and admins can update / add new ones.
+# Group BidStrategy
+BidStrategies can be accessed here, and admins can update / add new ones.
 
-## ConnectionTypes Collection [/connectionTypes?limit=limit]
+## BidStrategies Collection [/bidStrategies?limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
 
@@ -13,10 +13,10 @@ ConnectionTypes can be accessed here, and admins can update / add new ones.
                 { 
                 data : {
                     modified_by: null
-                    name: "2G/EDGE"
+                    name: "CPI"
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "ConnectionType"
+                    class: "BidStrategy"
                     version: 1
                     modifier: null
                     id: 1
@@ -25,10 +25,10 @@ ConnectionTypes can be accessed here, and admins can update / add new ones.
                 {
                  data : {
                     modified_by: null
-                    name: "3G"
+                    name: "CPC"
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "ConnectionType"
+                    class: "BidStrategy"
                     version: 1
                     modifier: null
                     id: 2
@@ -38,13 +38,13 @@ ConnectionTypes can be accessed here, and admins can update / add new ones.
             
 
 
-## ConnectionTypes Create [/connectionTypes]
+## BidStrategies Create [/bidStrategies]
 ### Create a Connection Type [POST]
 + Request (application/json)
 
     
         {
-            name: "Ansible"
+            name: "CPFTW"
 
         }
 
@@ -55,22 +55,22 @@ ConnectionTypes can be accessed here, and admins can update / add new ones.
         { 
           data: {
             modified_by: null
-            name: "Ansible"
+            name: "CPFTW"
             created_at: "2014-03-25T21:30:42+00:00"
             updated_at: "2014-03-25T21:30:42+00:00"
-            class: "ConnectionType"
+            class: "BidStrategy"
             version: 1
             modifier: null
             id: 1
           }
         }
 
-## ConnectionType [/connectionTypes/id]
+## BidStrategy [/bidStrategies/id]
 Get a single User object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
 
-### Retrieve a ConnectionType [GET]
+### Retrieve a BidStrategy [GET]
 + Response 200 (application/json)
 
     + Body
@@ -78,39 +78,39 @@ Get a single User object
             {
                 data: {
                   modified_by: null
-                  name: "Ansible"
+                  name: "CPI"
                   created_at: "2014-03-25T21:30:42+00:00"
                   updated_at: "2014-03-25T21:30:42+00:00"
-                  class: "ConnectionType"
+                  class: "BidStrategy"
                   version: 1
                   modifier: null
                   id: 1
                 }
             }
             
-### Update A ConnectionType [PATCH]
+### Update A BidStrategy [PATCH]
 
 + Request (application/json)
 
         {
-            first_name: "sublight"
+            first_name: "CPFTW"
         }
 + Response 200 (application/json)
 
         {
             data : {
               modified_by: null
-              name: "sublight"
+              name: "CPFTW"
               created_at: "2014-03-25T21:30:42+00:00"
               updated_at: "2014-03-25T21:30:42+00:00"
-              class: "ConnectionType"
+              class: "BidStrategy"
               version: 2
               modifier: null
               id: 1
             }
         }   
 
-### Remove a ConnectionType [DELETE]
+### Remove a BidStrategy [DELETE]
 
 + Response 200
 
