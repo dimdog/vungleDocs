@@ -48,8 +48,6 @@ DemandAccounts Endpoints
 /adGroups/:id (GET,PATCH,DELETE) Get the adGroup, update the adGroup, delete the adGroup
 /adGroups/:id/adUnits (GET) Get all the adUnits
 /adGroups/:id/adUnits/:id (GET, DELETE) Gets the AdUnit, removes the adUnit from the adGroup
-/adGroups/:id/adWindows/ (GET, POST) <-- Add to Jira
-/adGroups/:id/adWindows/:id (GET) <-- delete from the top level endpoint? #TODO
 /adGroups/:id/geoGroups/ (GET)
 /adGroups/:id/geoGroups/:id (GET, POST, DELETE)
 /adGroups/:id/platformVersions/ (GET)
@@ -93,6 +91,13 @@ DemandAccounts Endpoints
 /adUnits/:id/tpat/ (GET) #TODO
 /adUnits/:id/tpat/:id (GET, POST, DELETE) #TODO
 
+/geoGroups/:id (GET, PATCH, DELETE)
+/geoGroups/:id/cities/ (GET) 
+/geoGroups/:id/cities/:id (GET, POST, DELETE) 
+/geoGroups/:id/provinces/ (GET) 
+/geoGroups/:id/provinces/:id (GET, POST, DELETE) 
+/geoGroups/:id/countries/ (GET) 
+/geoGroups/:id/countries/:id (GET, POST, DELETE) 
 
 /bidStrategies/ (GET, POST)
 /bidStrategies/:id (GET, PATCH, DELETE)
