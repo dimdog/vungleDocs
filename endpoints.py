@@ -12,7 +12,7 @@ Users Endpoints
 DemandAccounts Endpoints
 /demandAccounts/ (GET) <-- get all DAs I have access to (Maybe just return it as {data :DA})
 /demandAccounts/:id (GET, PATCH, DELETE) <-- GET = get that DA. PATCH = update that DA. DELETE = delete that DA
-/demandAccounts/:id/users/ (GET, POST) <-- GET = get all the users and their perms for the DA. POST = Creates a user for that demandAccount+perms 
+/demandAccounts/:id/users/ (GET, POST) <-- GET = get all the users and their perms for the DA. POST = Creates or attaches a user(by username) for that demandAccount+perms 
 /demandAccounts/:id/users/:id (GET, POST, DELETE) <-- GET = get User. POST = creates a relationship between user and DA . DELETE = Delete the relationship  
 /demandAccounts/:id/campaigns (GET, POST)
 /demandAccounts/:id/adUnits/ (GET, POST)
@@ -25,7 +25,6 @@ DemandAccounts Endpoints
 
 /campaigns/:id (GET,PATCH,DELETE) Get the campaign, update the campaign, delete the campaign <-- Talk to Dan about Delete
 /campaigns/:id/adGroups (GET, POST) GET = Get all the adgroups, POST = create a new adgroup on that campaign
-/campaigns/:id/adGroups/:id (GET) Get the adgroup
 /campaigns/:id/geoGroups (GET)
 /campaigns/:id/geoGroups/:id (GET, POST, DELETE)
 /campaigns/:id/platformVersions (GET)
@@ -46,18 +45,88 @@ DemandAccounts Endpoints
 /campaigns/:id/status/:id (GET, POST, DELETE)
 
 
-/adGroups/:id
-/adGroups/:id/adUnits
-/adGroups/:id/adUnits/:id
+/adGroups/:id (GET,PATCH,DELETE) Get the adGroup, update the adGroup, delete the adGroup
+/adGroups/:id/adUnits (GET) Get all the adUnits
+/adGroups/:id/adUnits/:id (GET, DELETE) Gets the AdUnit, removes the adUnit from the adGroup
+/adGroups/:id/adWindows/ (GET, POST) <-- Add to Jira
+/adGroups/:id/adWindows/:id (GET) <-- delete from the top level endpoint? #TODO
+/adGroups/:id/geoGroups/ (GET)
+/adGroups/:id/geoGroups/:id (GET, POST, DELETE)
+/adGroups/:id/platformVersions/ (GET)
+/adGroups/:id/platformVersions/:id (GET, POST, DELETE)
+/adGroups/:id/devices/ (GET)
+/adGroups/:id/devices/:id (GET, POST, DELETE)
+/adGroups/:id/connectionTypes/ (GET)
+/adGroups/:id/connectionTypes/:id (GET, POST, DELETE)
+/adGroups/:id/categories/ (GET)
+/adGroups/:id/categories/:id (GET, POST, DELETE)
+/adGroups/:id/ISULists/ (GET)
+/adGroups/:id/ISULists/:id (GET, POST, DELETE)
+/adGroups/:id/siteIDLists/ (GET)
+/adGroups/:id/siteIDLists/:id (GET, POST, DELETE)
+/adGroups/:id/status (GET)
+/adGroups/:id/status/:id (GET, POST, DELETE)
+/adGroups/:id/rating (GET)
+/adGroups/:id/rating/:id (GET, POST, DELETE)
+/adGroups/:id/language (GET)
+/adGroups/:id/language/:id (GET, POST, DELETE)
 
 
-/adUnits/
-/adUnits/:id
-/adUnits/:id/video/:id
-/adUnits/:id/preRoll/:id
-/adUnits/:id/postRoll/:id
+/adUnits/:id (GET, PATCH, DELETE)
+/adUnits/:id/adGroups/ (GET)
+/adUnits/:id/video/ (GET)
+/adUnits/:id/video/:id  (GET, POST, DELETE)
+/adUnits/:id/preRoll/ (GET)
+/adUnits/:id/preRoll/:id (GET, POST, DELETE)
+/adUnits/:id/postRoll/ (GET)
+/adUnits/:id/postRoll/:id (GET, POST, DELETE)
+/adUnits/:id/status (GET)
+/adUnits/:id/status/:id (GET, POST, DELETE)
+/adUnits/:id/rating (GET)
+/adUnits/:id/rating/:id (GET, POST, DELETE)
+/adUnits/:id/language (GET)
+/adUnits/:id/language/:id (GET, POST, DELETE)
+/adUnits/:id/category (GET)
+/adUnits/:id/category/:id (GET, POST, DELETE)
+/adUnits/:id/metaTags/ (GET)
+/adUnits/:id/metaTags/:id (GET, POST, DELETE)
+/adUnits/:id/tpat/ (GET) #TODO
+/adUnits/:id/tpat/:id (GET, POST, DELETE) #TODO
 
-/connectionTypes/ (GET, POST(admin only)))
-/connectionTypes/:id (GET, PATCH(admin only), DELETE(admin only))
 
+/bidStrategies/ (GET, POST)
+/bidStrategies/:id (GET, PATCH, DELETE)
+
+/categories/ (GET, POST)
+/categories/:id (GET, PATCH, DELETE)
+
+/companies/ (GET, POST)
+/companies/:id (GET, PATCH, DELETE)
+
+/connectionTypes/ (GET, POST)
+/connectionTypes/:id (GET, PATCH, DELETE)
+
+/devices/ (GET, POST)
+/devices/:id (GET, PATCH, DELETE)
+
+/languages/ (GET, POST)
+/languages/:id (GET, PATCH, DELETE)
+
+/metaTags/ (GET, POST)
+/metaTags/:id (GET, PATCH, DELETE)
+
+/oems/ (GET, POST)
+/oems/:id (GET, PATCH, DELETE)
+
+/platforms/ (GET, POST)
+/platforms/:id (GET, PATCH, DELETE)
+
+/platformVersions/ (GET, POST)
+/platformVersions/:id (GET, PATCH, DELETE)
+
+/ratings/ (GET, POST)
+/ratings/:id (GET, PATCH, DELETE)
+
+/status/ (GET, POST)
+/status/:id (GET, PATCH, DELETE)
 
