@@ -1,5 +1,4 @@
 auth.apib
 users.apib
-usersDemandAccounts.apib
 demandAccounts.apib
-companies.apib
+connectionTypes.apib

@@ -1,0 +1,119 @@
+# Group ConnectionType
+ConnectionTypes can be accessed here, and admins can update / add new ones.
+
+## ConnectionTypes Collection [/connectionTypes?limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+
+### Retrieve all Connection Types [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "2G/EDGE"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "ConnectionType"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "3G"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "ConnectionType"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+
+
+## ConnectionTypes Create [/connectionTypes]
+### Create a Connection Type [POST]
++ Request (application/json)
+
+    
+        {
+            name: "Ansible"
+
+        }
+
+        
+
++ Response 200 (application/json)
+
+        { 
+          data: {
+            modified_by: null
+            name: "Ansible"
+            created_at: "2014-03-25T21:30:42+00:00"
+            updated_at: "2014-03-25T21:30:42+00:00"
+            class: "ConnectionType"
+            version: 1
+            modifier: null
+            id: 1
+          }
+        }
+
+## ConnectionType [/connectionTypes/id?]
+Get a single User object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+
+### Retrieve a ConnectionType [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Ansible"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "ConnectionType"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+            
+### Update A User [PATCH]
+
++ Request (application/json)
+
+        {
+            first_name: "sublight"
+        }
++ Response 200 (application/json)
+
+        {
+            data : {
+              modified_by: null
+              name: "sublight"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "ConnectionType"
+              version: 2
+              modifier: null
+              id: 1
+            }
+        }   
+
+##  Delete a User [/users/id]
+### Remove a User [DELETE]
++ Response 200
+
+
+
+
