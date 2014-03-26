@@ -104,6 +104,8 @@ DemandAccounts Endpoints
 
 /categories/ (GET, POST)
 /categories/:id (GET, PATCH, DELETE)
+/categories/:id/categories/ (GET)
+/categories/:id/categories/:id (GET, POST, DELETE)
 
 /companies/ (GET, POST)
 /companies/:id (GET, PATCH, DELETE)

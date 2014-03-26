@@ -1,15 +1,14 @@
-# Group Categories
-Categories can be accessed here, and admins can update / add new ones. 
-Categories can have sub-categories, they can be accessed via `categories` on a category object. There is currently only 2 levels of categories allowed. 
+# Group Categories/Categories
 `parent` is either null or the category that the current category is a sub-category of.
 
 
-## Categories Collection [/categories?include=includes&limit=limit]
+## Subcategories Collection [/categories/:id/categories?include=includes&limit=limit]
 + Parameters
+    + id (required, number, `1`) ... Numeric `id` of the parent Category to perform action with.
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
     + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `categories`,`parent` or `all`
 
-### Retrieve all Categories [GET]
+### Retrieve all Subcategories [GET]
 + Response 200 (application/json)
 
     + Body
@@ -22,10 +21,10 @@ Categories can have sub-categories, they can be accessed via `categories` on a c
                     updated_at: "2014-03-25T21:30:42+00:00"
                     class: "Category"
                     iab_id: 5
-                    parent_id: null
+                    parent_id: :id
                     version: 1
                     modifier: null
-                    id: 1
+                    id: 2
                     }
                 },
                 {
@@ -36,53 +35,22 @@ Categories can have sub-categories, they can be accessed via `categories` on a c
                     updated_at: "2014-03-25T21:30:42+00:00"
                     class: "Category"
                     iab_id: null 
-                    parent_id: 1
+                    parent_id: :id
                     version: 1
                     modifier: null
-                    id: 2
+                    id: 3
                     }
                 }
             ]
             
-
-
-## Categories Create [/categories]
-### Create a Category [POST]
-+ Request (application/json)
-
-    
-        {
-            name: "Adventure"
-            iab_id: 5
-
-        }
-
-        
-
-+ Response 200 (application/json)
-
-        { 
-          data: {
-            modified_by: null
-            name: "Adventure"
-            created_at: "2014-03-25T21:30:42+00:00"
-            updated_at: "2014-03-25T21:30:42+00:00"
-            class: "Category"
-            iab_id: 5 
-            parent_id: null
-            version: 1
-            modifier: null
-            id: 1
-          }
-        }
-
-## Category [/categories/id?include=includes]
-Get a single User object 
+## Subcategory [/categories/:id/categories/:subid?include=includes]
+Get a single Subcategory object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Category to perform action with. Has example value.
+    + subid (required, number, `2`) ... Numeric `id` of the Sbubcategory to perform action with. Has example value.
     + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `categories`, `parent`, or `all`
 
-### Retrieve a Category [GET]
+### Retrieve a Subcategory [GET]
 + Response 200 (application/json)
 
     + Body
@@ -95,21 +63,16 @@ Get a single User object
                   updated_at: "2014-03-25T21:30:42+00:00"
                   class: "Category"
                   iab_id: 5 
-                  parent_id: null
+                  parent_id: :id
                   version: 1
                   modifier: null
-                  id: 1
+                  id: :subid
                   categories: {}
                 }
             }
             
-### Update A Category [PATCH]
+### Make a Category a Subcateogory [POST]
 
-+ Request (application/json)
-
-        {
-            name: "New Category"
-        }
 + Response 200 (application/json)
 
         {
@@ -119,13 +82,15 @@ Get a single User object
               created_at: "2014-03-25T21:30:42+00:00"
               updated_at: "2014-03-25T21:30:42+00:00"
               class: "Category"
+              iab_id: 5 
+              parent_id: :id
               version: 2
               modifier: null
-              id: 1
+              id: :subid
             }
         }   
 
-### Remove a Category [DELETE]
+### Remove a Subcategory [DELETE]
 
 + Response 200
 
