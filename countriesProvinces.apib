@@ -1,14 +1,15 @@
-# Group Provinces
-Provinces can be accessed here
-Provinces can have cities under them, and must be part of a Country 
+# Group Countries/Provinces
+Provinces that are a part of a specific Country can be accessed here
+Provinces can have cities under them.
 
 
-## Provinces Collection [/provinces?include=includes&limit=limit]
+## Countries/Provinces Collection [/countries/:id/provinces?include=includes&limit=limit]
 + Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Country to perform action with. Has example value.
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `country`, `cities`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `cities`, or `all`
 
-### Retrieve all Provinces [GET]
+### Retrieve all Provinces that are a part of a Country [GET]
 + Response 200 (application/json)
 
     + Body
@@ -20,7 +21,7 @@ Provinces can have cities under them, and must be part of a Country
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
                     class: "Province"
-                    country_id: null
+                    country_id: :id
                     version: 1
                     modifier: null
                     id: 1
@@ -33,7 +34,7 @@ Provinces can have cities under them, and must be part of a Country
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
                     class: "Province"
-                    country_id: 1
+                    country_id: :id
                     version: 1
                     modifier: null
                     id: 2
@@ -41,13 +42,14 @@ Provinces can have cities under them, and must be part of a Country
                 }
             ]
             
-## Province [/provinces/id?include=includes]
+## Province [/countries/:id/provinces/subid?include=includes]
 Get a single Province object 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Province to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `country`, `cities`, or `all`
+    + id (required, number, `1`) ... Numeric `id` of the Country to perform action with. Has example value.
+    + subid (required, number, `2`) ... Numeric `subid` of the Province to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `cities`, or `all`
 
-### Retrieve a Province [GET]
+### Retrieve a specific Province under a Country [GET]
 + Response 200 (application/json)
 
     + Body
@@ -59,11 +61,10 @@ Get a single Province object
                   created_at: "2014-03-25T21:30:42+00:00"
                   updated_at: "2014-03-25T21:30:42+00:00"
                   class: "Province"
-                  country_id: null
-                  country : {}
+                  country_id: :id
                   cities : {{}}
                   version: 1
                   modifier: null
-                  id: 1
+                  id: :subid
                 }
             }

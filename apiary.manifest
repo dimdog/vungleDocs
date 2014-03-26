@@ -6,7 +6,9 @@ cities.apib
 companies.apib
 connectionTypes.apib
 countries.apib
+countriesProvinces.apib
 deliveryMethods.apib
 users.apib
 provinces.apib
+provincesCities.apib
 ratings.apib
