@@ -4,5 +4,6 @@ categories.apib
 categoriesCategories.apib
 companies.apib
 connectionTypes.apib
+deliveryMethods.apib
 users.apib
 ratings.apib
