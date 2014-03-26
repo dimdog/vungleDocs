@@ -1,0 +1,119 @@
+# Group DeliveryMethod
+DeliveryMethods can be accessed here, and admins can update / add new ones.
+
+## DeliveryMethods Collection [/deliveryMethods?limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+
+### Retrieve all DeliveryMethods [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "Pre-Cache"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "DeliveryMethod"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "Streaming"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "DeliveryMethod"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+
+
+## DeliveryMethods Create [/deliveryMethods]
+### Create a DeliveryMethod [POST]
++ Request (application/json)
+
+    
+        {
+            name: "Hybrid"
+
+        }
+
+        
+
++ Response 200 (application/json)
+
+        { 
+          data: {
+            modified_by: null
+            name: "Hybrid"
+            created_at: "2014-03-25T21:30:42+00:00"
+            updated_at: "2014-03-25T21:30:42+00:00"
+            class: "DeliveryMethod"
+            version: 1
+            modifier: null
+            id: 1
+          }
+        }
+
+## DeliveryMethod [/deliveryMethods/id]
+Get a single DeliveryMethod object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the DeliveryMethod to perform action with.
+
+### Retrieve a DeliveryMethod [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Pre-Cache"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "DeliveryMethod"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+            
+### Update A DeliveryMethod [PATCH]
+
++ Request (application/json)
+
+        {
+            first_name: "Hybrid"
+        }
++ Response 200 (application/json)
+
+        {
+            data : {
+              modified_by: null
+              name: "Hybrid"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "DeliveryMethod"
+              version: 2
+              modifier: null
+              id: 1
+            }
+        }   
+
+### Remove a DeliveryMethod [DELETE]
+
++ Response 200
+
+
+
+

@@ -1,0 +1,125 @@
+# Group Rating
+Ratings can be accessed here, and admins can update / add new ones.
+
+## Ratings Collection [/ratings?limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+
+### Retrieve all Ratings [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "PG"
+                    minimum_age: 10
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Rating"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "G"
+                    minimum_age: 5
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Rating"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+
+
+## Ratings Create [/ratings]
+### Create a Rating [POST]
++ Request (application/json)
+
+    
+        {
+            name: "R"
+            minimum_age: 17
+
+        }
+
+        
+
++ Response 200 (application/json)
+
+        { 
+          data: {
+            modified_by: null
+            name: "R"
+            minimum_age: 17
+            created_at: "2014-03-25T21:30:42+00:00"
+            updated_at: "2014-03-25T21:30:42+00:00"
+            class: "Rating"
+            version: 1
+            modifier: null
+            id: 1
+          }
+        }
+
+## Rating [/ratings/id]
+Get a single Rating object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Rating to perform action with.
+
+### Retrieve a Rating [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "PG"
+                  minimum_age: 10
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Rating"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+            
+### Update A Rating [PATCH]
+
++ Request (application/json)
+
+        {
+            first_name: "R"
+        }
++ Response 200 (application/json)
+
+        {
+            data : {
+              modified_by: null
+              name: "R"
+              minimum_age: 10
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "Rating"
+              version: 2
+              modifier: null
+              id: 1
+            }
+        }   
+
+### Remove a Rating [DELETE]
+
++ Response 200
+
+
+
+
