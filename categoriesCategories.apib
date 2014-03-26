@@ -1,12 +1,12 @@
 # Group Categories/Categories
-`parent` is either null or the category that the current category is a sub-category of.
+`parent` is the category that the current category is a sub-category of.
 
 
 ## Subcategories Collection [/categories/:id/categories?include=includes&limit=limit]
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the parent Category to perform action with.
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `categories`,`parent` or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `parent` or `all`
 
 ### Retrieve all Subcategories [GET]
 + Response 200 (application/json)
@@ -47,8 +47,8 @@
 Get a single Subcategory object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Category to perform action with. Has example value.
-    + subid (required, number, `2`) ... Numeric `id` of the Sbubcategory to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `categories`, `parent`, or `all`
+    + subid (required, number, `2`) ... Numeric `id` of the Subcategory to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `parent`, or `all`
 
 ### Retrieve a Subcategory [GET]
 + Response 200 (application/json)
@@ -67,7 +67,6 @@ Get a single Subcategory object
                   version: 1
                   modifier: null
                   id: :subid
-                  categories: {}
                 }
             }
             
