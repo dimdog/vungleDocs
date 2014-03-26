@@ -1,0 +1,123 @@
+# Group OEM
+OEMs can be accessed here, and admins can update / add new ones.
+OEMS can have devices associated with them.
+
+## OEMs Collection [/oems?limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `devices`, or `all`
+
+### Retrieve all OEMs [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "Samsung"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "OEM"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "Google"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "OEM"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+
+
+## OEMs Create [/oems]
+### Create a OEM [POST]
++ Request (application/json)
+
+    
+        {
+            name: "Apple"
+
+        }
+
+        
+
++ Response 200 (application/json)
+
+        { 
+          data: {
+            modified_by: null
+            name: "Apple"
+            created_at: "2014-03-25T21:30:42+00:00"
+            updated_at: "2014-03-25T21:30:42+00:00"
+            class: "OEM"
+            version: 1
+            modifier: null
+            id: 1
+          }
+        }
+
+## OEM [/oems/id]
+Get a single OEM object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `devices`, or `all`
+
+### Retrieve a OEM [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Apple"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "OEM"
+                  devices : {{}}
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+            
+### Update A OEM [PATCH]
+
++ Request (application/json)
+
+        {
+            first_name: "Oculus"
+        }
++ Response 200 (application/json)
+
+        {
+            data : {
+              modified_by: null
+              name: "Oculus"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "OEM"
+              version: 2
+              modifier: null
+              id: 1
+            }
+        }   
+
+### Remove a OEM [DELETE]
+
++ Response 200
+
+
+
+
