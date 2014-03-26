@@ -1,0 +1,65 @@
+# Group Countries
+Countries can be accessed here.
+Countries can have provinces as part of them
+
+
+## Countries Collection [/countries?include=includes&limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `provinces`, or `all`
+
+### Retrieve all Countries [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "Union of Soviet Socialist Republics"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Country"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "United States of America"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Country"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+## Country [/countries/id?include=includes]
+Get a single Country object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Country to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `provinces`, or `all`
+
+### Retrieve a Country [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Arizona"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Country"
+                  provinces: {{}}
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }

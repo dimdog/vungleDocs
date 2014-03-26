@@ -2,8 +2,11 @@ auth.apib
 bidStrategy.apib
 categories.apib
 categoriesCategories.apib
+cities.apib
 companies.apib
 connectionTypes.apib
+countries.apib
 deliveryMethods.apib
 users.apib
+provinces.apib
 ratings.apib
