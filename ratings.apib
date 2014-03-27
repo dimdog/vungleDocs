@@ -46,9 +46,10 @@ Ratings can be accessed here, and admins can update / add new ones.
 
     
         {
-            name: "R"
-            minimum_age: 17
-
+            data : {
+                name: "R"
+                minimum_age: 17
+            }
         }
 
         
@@ -98,7 +99,9 @@ Get a single Rating object
 + Request (application/json)
 
         {
-            first_name: "R"
+            data: {
+                first_name: "R"
+            }
         }
 + Response 200 (application/json)
 

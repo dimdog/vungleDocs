@@ -1,11 +1,11 @@
 # Group Users/DemandAccounts
 Allows you to get all demandAccounts associated with a user, and also to modify those relations.
-## Demand Accounts Collection [/users/:id/demandAccounts?include=includes&limit=limit]
+## User's DemandAccounts Collection [/users/:id/demandAccounts?include=includes&limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
     + includes (optional, string, `'parent,videos'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`, or `all`
 
-### List all Demand Accounts [GET]
+### List all of a User's  DemandAccounts [GET]
 + Response 200 (application/json)
 
         [
@@ -37,12 +37,20 @@ Allows you to get all demandAccounts associated with a user, and also to modify 
                     modifier: null
                 },
                 permissions: {
-                    financial_read: False
-                    financial_write: True
-                    manager: False
-                    read: False
-                    reports_read: False
-                    write: True
+                    financial_write: true
+                    user_id: :id
+                    financial_read: true
+                    read: true
+                    created_at: "2014-03-27T17:50:30+00:00"
+                    updated_at: "2014-03-27T17:50:30+00:00"
+                    write: false
+                    manager: true
+                    version: 1
+                    modified_by: null
+                    modifier: null
+                    reports_read: true
+                    class: "UserDemandAccounts"
+                    demandAccount_id: 1
                 }
             },
             {
@@ -73,97 +81,71 @@ Allows you to get all demandAccounts associated with a user, and also to modify 
                     modifier: null
                 },
                 permissions : {
-                    financial_read: False
-                    financial_write: True
-                    manager: False
-                    read: False
-                    reports_read: False
-                    write: True
+                    financial_write: true
+                    user_id: :id
+                    financial_read: true
+                    read: true
+                    created_at: "2014-03-27T17:50:30+00:00"
+                    updated_at: "2014-03-27T17:50:30+00:00"
+                    write: false
+                    manager: true
+                    version: 1
+                    modified_by: null
+                    modifier: null
+                    reports_read: true
+                    class: "UserDemandAccounts"
+                    demandAccount_id: 2
                 }
             }
         ]
 
-## Demand Accounts Create [/demandAccounts]
-### Create a Demand Accounts [POST]
+## Demand Accounts Create [/users/:id/demandAccounts]
+### Create a DemandAccount for a User [POST]
 + Request (application/json)
 
     
         {
-            geo_targetting: true
-            mailing_address: "My Mailing Address"
-            is_agency: false
-            billing_phone: "3149355555"
-            mailing_email: "email@mailing.com"
-            is_rtb: true
-            billing_email: "email@billing.com"
-            company: null
-            id: 1
-            parent: null
-            billing_address: "My Billing Address"
-            category_restriction: false
-            agency: null
-            approved_credit: 1000
-            age_restriction: true
-            mailing_phone: "2124843915"
-            name: "Vungle"
-            spent_credit: 500
-            modifier: null
-            financial_read: False
-            financial_write: True
-            manager: False
-            read: False
-            reports_read: False
-            write: True
+            data: {
+                geo_targetting: true
+                mailing_address: "My Mailing Address"
+                is_agency: false
+                billing_phone: "3149355555"
+                mailing_email: "email@mailing.com"
+                is_rtb: true
+                billing_email: "email@billing.com"
+                company: null
+                id: 1
+                parent: null
+                billing_address: "My Billing Address"
+                category_restriction: false
+                agency: null
+                approved_credit: 1000
+                age_restriction: true
+                mailing_phone: "2124843915"
+                name: "Vungle"
+                spent_credit: 500
+                modifier: null
+                financial_read: False
+                financial_write: True
+                manager: False
+                read: False
+                reports_read: False
+                write: True
+            }
+            permissions: {
+                financial_write: true
+                financial_read: true
+                write: true
+                read: true
+                manager: false
+                reports_read: false
+            }
         }
         
 + Response 200 (application/json)
 
         {
-            geo_targetting: true
-            mailing_address: "My Mailing Address"
-            updated_at: "2014-03-12T20:48:32+00:00"
-            is_agency: false
-            billing_phone: "3149355555"
-            mailing_email: "email@mailing.com"
-            modified_by: null
-            is_rtb: true
-            billing_email: "email@billing.com"
-            company_id: null
-            id: 1
-            parent_id: null
-            version: 1
-            billing_address: "My Billing Address"
-            category_restriction: false
-            agency_id: null
-            approved_credit: 1000
-            class: "DemandAccount"
-            age_restriction: true
-            mailing_phone: "2124843915"
-            name: "Vungle"
-            created_at: "2014-03-12T20:48:32+00:00"
-            spent_credit: 500
-            modifier: null
-            financial_read: False
-            financial_write: True
-            manager: False
-            read: False
-            reports_read: False
-            write: True
-        }
-
-## DemandAccounts [/demandAccounts/id?include=includes&limit=limit]
-Get a single DemandAccount object 
-
-+ Parameters  
-    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`,`users_proxy or `all`
-
-### Get a single Demand Account [GET]
-+ Response 200 (application/json)
-    
-    + Body
-    
-            {
+            data: {
                 geo_targetting: true
                 mailing_address: "My Mailing Address"
                 updated_at: "2014-03-12T20:48:32+00:00"
@@ -173,14 +155,11 @@ Get a single DemandAccount object
                 modified_by: null
                 is_rtb: true
                 billing_email: "email@billing.com"
-                agency: null
                 company_id: null
                 id: 1
                 parent_id: null
                 version: 1
                 billing_address: "My Billing Address"
-                parent: null
-                company: null
                 category_restriction: false
                 agency_id: null
                 approved_credit: 1000
@@ -191,19 +170,89 @@ Get a single DemandAccount object
                 created_at: "2014-03-12T20:48:32+00:00"
                 spent_credit: 500
                 modifier: null
-                financial_read: False
-                financial_write: True
-                manager: False
-                read: False
-                reports_read: False
-                write: True
+            }
+            permissions: {
+                financial_write: true
+                user_id: :id
+                financial_read: true
+                read: true
+                created_at: "2014-03-27T17:50:30+00:00"
+                updated_at: "2014-03-27T17:50:30+00:00"
+                write: true 
+                manager: false 
+                version: 1
+                modified_by: null
+                modifier: null
+                reports_read: false 
+                class: "UserDemandAccounts"
+                demandAccount_id: 1
+            }
+        }
+
+## DemandAccounts [/users/:id/demandAccounts/:subid?include=includes&limit=limit]
+Get a single DemandAccount and its permissions for a given user 
+
++ Parameters  
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`, or `all`
+
+### Get a single Demand Account for a user [GET]
++ Response 200 (application/json)
+    
+    + Body
+    
+            {
+                data: {
+                    geo_targetting: true
+                    mailing_address: "My Mailing Address"
+                    updated_at: "2014-03-12T20:48:32+00:00"
+                    is_agency: false
+                    billing_phone: "3149355555"
+                    mailing_email: "email@mailing.com"
+                    modified_by: null
+                    is_rtb: true
+                    billing_email: "email@billing.com"
+                    company_id: null
+                    id: 1
+                    parent_id: null
+                    version: 1
+                    billing_address: "My Billing Address"
+                    category_restriction: false
+                    agency_id: null
+                    approved_credit: 1000
+                    class: "DemandAccount"
+                    age_restriction: true
+                    mailing_phone: "2124843915"
+                    name: "Vungle"
+                    created_at: "2014-03-12T20:48:32+00:00"
+                    spent_credit: 500
+                    modifier: null
+                }
+                permissions: {
+                    financial_write: true
+                    user_id: :id
+                    financial_read: true
+                    read: true
+                    created_at: "2014-03-27T17:50:30+00:00"
+                    updated_at: "2014-03-27T17:50:30+00:00"
+                    write: true 
+                    manager: false 
+                    version: 1
+                    modified_by: null
+                    modifier: null
+                    reports_read: false 
+                    class: "UserDemandAccounts"
+                    demandAccount_id: 1
+                }
             }
 
-### Update a DemandAccount [PATCH]
+### Modify the permissions between a User and a DemandAccount [POST]
 + Request (application/json)
 
         {
-            geo_targetting : false
+            permissions: {
+                financial_read: false
+            }
         }
 
 + Response 200 (application/json)
@@ -211,55 +260,50 @@ Get a single DemandAccount object
     + Body
     
             {
-                geo_targetting: false
-                ISULists: { }
-                videos: { }
-                mailing_address: "My Mailing Address"
-                users_proxy: { }
-                updated_at: "2014-03-12T20:48:32+00:00"
-                is_agency: false
-                billing_phone: "3149355555"
-                mailing_email: "email@mailing.com"
-                adUnits: { }
-                modified_by: null
-                is_rtb: true
-                billing_email: "email@billing.com"
-                SiteIDLists: { }
-                agency: null
-                company_id: null
-                geoGroups: { }
-                id: 1
-                parent_id: null
-                version: 1
-                postRolls: { }
-                tpatGroups: { }
-                billing_address: "My Billing Address"
-                users: { }
-                parent: null
-                company: null
-                category_restriction: false
-                agency_id: null
-                campaigns: { }
-                approved_credit: 1000
-                class: "DemandAccount"
-                age_restriction: true
-                mailing_phone: "2124843915"
-                name: "Vungle"
-                created_at: "2014-03-12T20:48:32+00:00"
-                children: { }
-                spent_credit: 500
-                preRolls: { }
-                demandAccounts: { }
-                modifier: null
-                financial_read: False
-                financial_write: True
-                manager: False
-                read: False
-                reports_read: False
-                write: True
+                data: {
+                    geo_targetting: true
+                    mailing_address: "My Mailing Address"
+                    updated_at: "2014-03-12T20:48:32+00:00"
+                    is_agency: false
+                    billing_phone: "3149355555"
+                    mailing_email: "email@mailing.com"
+                    modified_by: null
+                    is_rtb: true
+                    billing_email: "email@billing.com"
+                    company_id: null
+                    id: 1
+                    parent_id: null
+                    version: 1
+                    billing_address: "My Billing Address"
+                    category_restriction: false
+                    agency_id: null
+                    approved_credit: 1000
+                    class: "DemandAccount"
+                    age_restriction: true
+                    mailing_phone: "2124843915"
+                    name: "Vungle"
+                    created_at: "2014-03-12T20:48:32+00:00"
+                    spent_credit: 500
+                    modifier: null
+                }
+                permissions: {
+                    financial_write: false
+                    user_id: :id
+                    financial_read: true
+                    read: true
+                    created_at: "2014-03-27T17:50:30+00:00"
+                    updated_at: "2014-03-27T17:50:30+00:00"
+                    write: true 
+                    manager: false 
+                    version: 1
+                    modified_by: null
+                    modifier: null
+                    reports_read: false 
+                    class: "UserDemandAccounts"
+                    demandAccount_id: 1
+                }
             }
 
-
-##  Delete a DemandAccount [/demandAccounts/id]
-### Remove a DemandAccount [DELETE]
+##  Delete a DemandAccount from a user [/users/:id/demandAccounts/id]
+### Remove a DemandAccount from a user [DELETE]
 + Response 200

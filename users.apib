@@ -22,12 +22,10 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
                     last_name: "Computer"
                     modified_by: null
                     created_at: "2014-03-12T16:29:48+00:00"
-                    demandAccounts: { }
                     updated_at: "2014-03-12T16:29:48+00:00"
                     class: "User"
                     version: 1
                     is_admin: true
-                    modifier: null
                     id: 1
                     }
                 },
@@ -38,12 +36,10 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
                     last_name: "potato"
                     modified_by: null
                     created_at: "2014-03-12T16:29:48+00:00"
-                    demandAccounts: { }
                     updated_at: "2014-03-12T16:29:48+00:00"
                     class: "User"
                     version: 1
                     is_admin: False
-                    modifier: null
                     id: 2
                     }
                 }
@@ -57,11 +53,13 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
 
     
         {
-            username: "vungle"
-            first_name: "I'm a"
-            last_name: "Computer"
-            is_admin: true
-            password: "my password"
+            data: {
+                username: "vungle"
+                first_name: "I'm a"
+                last_name: "Computer"
+                is_admin: true
+                password: "my password"
+            }
 
         }
 
@@ -88,7 +86,7 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
 Get a single User object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `demandAccounts`, `demandAccounts_proxy`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `demandAccounts`, or `all`
 
 ### Retrieve a User [GET]
 + Response 200 (application/json)
@@ -102,12 +100,11 @@ Get a single User object
                   last_name: "Computer"
                   modified_by: null
                   created_at: "2014-03-12T16:29:48+00:00"
-                  demandAccounts: { }
+                  demandAccounts: {{ }}
                   updated_at: "2014-03-12T16:29:48+00:00"
                   class: "User"
                   version: 1
                   is_admin: true
-                  demandAccounts_proxy: { }
                   modifier: null
                   id: 1
                 }
@@ -118,7 +115,9 @@ Get a single User object
 + Request (application/json)
 
         {
-            first_name: "No Longer A"
+            data: {
+                first_name: "No Longer A"
+            }
         }
 + Response 200 (application/json)
 

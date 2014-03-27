@@ -10,138 +10,74 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
 
         [
             {
-                geo_targetting: true
-                mailing_address: "My Mailing Address"
-                updated_at: "2014-03-12T20:48:32+00:00"
-                is_agency: false
-                billing_phone: "3149355555"
-                mailing_email: "email@mailing.com"
-                modified_by: null
-                is_rtb: true
-                billing_email: "email@billing.com"
-                company_id: null
-                id: 1
-                parent_id: null
-                version: 1
-                billing_address: "My Billing Address"
-                category_restriction: false
-                agency_id: null
-                approved_credit: 1000
-                class: "DemandAccount"
-                age_restriction: true
-                mailing_phone: "2124843915"
-                name: "Vungle"
-                created_at: "2014-03-12T20:48:32+00:00"
-                spent_credit: 500
-                modifier: null
-                financial_read: False
-                financial_write: True
-                manager: False
-                read: False
-                reports_read: False
-                write: True
+                data: {
+                    geo_targetting: true
+                    mailing_address: "My Mailing Address"
+                    updated_at: "2014-03-12T20:48:32+00:00"
+                    is_agency: false
+                    billing_phone: "3149355555"
+                    mailing_email: "email@mailing.com"
+                    modified_by: null
+                    is_rtb: true
+                    billing_email: "email@billing.com"
+                    company_id: null
+                    id: 1
+                    parent_id: null
+                    version: 1
+                    billing_address: "My Billing Address"
+                    category_restriction: false
+                    agency_id: null
+                    approved_credit: 1000
+                    class: "DemandAccount"
+                    age_restriction: true
+                    mailing_phone: "2124843915"
+                    name: "Vungle"
+                    created_at: "2014-03-12T20:48:32+00:00"
+                    spent_credit: 500
+                    modifier: null
+                    financial_read: False
+                    financial_write: True
+                    manager: False
+                    read: False
+                    reports_read: False
+                    write: True
+                }
             },
             {
-                geo_targetting: false
-                mailing_address: "Need a value"
-                updated_at: "2014-03-12T20:48:32+00:00"
-                is_agency: false
-                billing_phone: "13123123"
-                mailing_email: "valid@asd.com"
-                modified_by: null
-                is_rtb: null
-                billing_email: "validated@validated.co.uk"
-                company_id: null
-                id: 2
-                parent_id: null
-                version: 1
-                billing_address: "bonk"
-                category_restriction: false
-                agency_id: null
-                approved_credit: null
-                class: "DemandAccount"
-                age_restriction: false
-                mailing_phone: "53453252"
-                name: "Vungle 2"
-                created_at: "2014-03-12T20:48:32+00:00"
-                spent_credit: null
-                modifier: null
-                financial_read: False
-                financial_write: True
-                manager: False
-                read: False
-                reports_read: False
-                write: True
+                data: {
+                    geo_targetting: false
+                    mailing_address: "Need a value"
+                    updated_at: "2014-03-12T20:48:32+00:00"
+                    is_agency: false
+                    billing_phone: "13123123"
+                    mailing_email: "valid@asd.com"
+                    modified_by: null
+                    is_rtb: null
+                    billing_email: "validated@validated.co.uk"
+                    company_id: null
+                    id: 2
+                    parent_id: null
+                    version: 1
+                    billing_address: "bonk"
+                    category_restriction: false
+                    agency_id: null
+                    approved_credit: null
+                    class: "DemandAccount"
+                    age_restriction: false
+                    mailing_phone: "53453252"
+                    name: "Vungle 2"
+                    created_at: "2014-03-12T20:48:32+00:00"
+                    spent_credit: null
+                    modifier: null
+                    financial_read: False
+                    financial_write: True
+                    manager: False
+                    read: False
+                    reports_read: False
+                    write: True
+                }
             }
         ]
-
-## Demand Accounts Create [/demandAccounts]
-### Create a Demand Accounts [POST]
-+ Request (application/json)
-
-    
-        {
-            geo_targetting: true
-            mailing_address: "My Mailing Address"
-            is_agency: false
-            billing_phone: "3149355555"
-            mailing_email: "email@mailing.com"
-            is_rtb: true
-            billing_email: "email@billing.com"
-            company: null
-            id: 1
-            parent: null
-            billing_address: "My Billing Address"
-            category_restriction: false
-            agency: null
-            approved_credit: 1000
-            age_restriction: true
-            mailing_phone: "2124843915"
-            name: "Vungle"
-            spent_credit: 500
-            modifier: null
-            financial_read: False
-            financial_write: True
-            manager: False
-            read: False
-            reports_read: False
-            write: True
-        }
-        
-+ Response 200 (application/json)
-
-        {
-            geo_targetting: true
-            mailing_address: "My Mailing Address"
-            updated_at: "2014-03-12T20:48:32+00:00"
-            is_agency: false
-            billing_phone: "3149355555"
-            mailing_email: "email@mailing.com"
-            modified_by: null
-            is_rtb: true
-            billing_email: "email@billing.com"
-            company_id: null
-            id: 1
-            parent_id: null
-            version: 1
-            billing_address: "My Billing Address"
-            category_restriction: false
-            agency_id: null
-            approved_credit: 1000
-            class: "DemandAccount"
-            age_restriction: true
-            mailing_phone: "2124843915"
-            name: "Vungle"
-            created_at: "2014-03-12T20:48:32+00:00"
-            spent_credit: 500
-            modifier: null
-            financial_read: False
-            financial_write: True
-            manager: False
-            read: False
-            reports_read: False
-            write: True
-        }
 
 ## DemandAccounts [/demandAccounts/id?include=includes&limit=limit]
 Get a single DemandAccount object 
