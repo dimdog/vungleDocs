@@ -1,0 +1,95 @@
+# Group PlatformVersions
+PlatformVersions can be accessed here, and admins can update / add new ones.
+
+## PlatformVersions Collection [/platformVersions?limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, or `all`
+
+### Retrieve all PlatformVersions [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    platform_version: 7
+                    platform_id: 1
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "PlatformVersion"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    platform_version: 2.2
+                    platform_id: 2
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "PlatformVersion"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+## PlatformVersion [/platformVersions/id?include=includes]
+Get a single PlatformVersion object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, or `all`
+
+### Retrieve a PlatformVersion [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  platform_version: 2.2 
+                  platform_id: 2
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PlatformVersion"
+                  version: 1
+                  modifier: null
+                  id: 2
+                }
+            }
+
+### Update A PlatformVersion [PATCH]
+
+
++ Request (application/json)
+
+        {
+            data: {
+               platform_version : 3.14
+            }
+        }
++ Response 200 (application/json)
+
+        {
+            data: {
+              modified_by: null
+              platform_version: 3.14 
+              platform_id: 2
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "PlatformVersion"
+              version: 1
+              modifier: null
+              id: 2
+            }
+        }
+
+### Remove a PlatformVersion [DELETE]
+
++ Response 200
