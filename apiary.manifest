@@ -8,6 +8,7 @@ connectionTypes.apib
 countries.apib
 countriesProvinces.apib
 demandAccounts.apib
+devices.apib
 users.apib
 usersDemandAccounts.apib
 oems.apib
