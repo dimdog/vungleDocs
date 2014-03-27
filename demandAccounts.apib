@@ -80,45 +80,47 @@ Get a single DemandAccount object
     + Body
     
             {
-                geo_targetting: true
-                mailing_address: "My Mailing Address"
-                updated_at: "2014-03-12T20:48:32+00:00"
-                is_agency: false
-                billing_phone: "3149355555"
-                mailing_email: "email@mailing.com"
-                modified_by: null
-                is_rtb: true
-                billing_email: "email@billing.com"
-                agency: null
-                company_id: null
-                id: 1
-                parent_id: null
-                version: 1
-                billing_address: "My Billing Address"
-                parent: null
-                company: null
-                category_restriction: false
-                agency_id: null
-                approved_credit: 1000
-                class: "DemandAccount"
-                age_restriction: true
-                mailing_phone: "2124843915"
-                name: "Vungle"
-                created_at: "2014-03-12T20:48:32+00:00"
-                spent_credit: 500
-                modifier: null
-                parent: { }
-                agency: { }
-                company: { }
-                users: { { } }
-                preRolls: { { } }
-                postRolls: { { } }
-                videos: { { } }
-                adUnits: { { } }
-                tpatGroups: { { } }
-                geoGroups: { { } }
-                campaigns: { { } }
-                demandAccounts: { { } }
+                data: {
+                    geo_targetting: true
+                    mailing_address: "My Mailing Address"
+                    updated_at: "2014-03-12T20:48:32+00:00"
+                    is_agency: false
+                    billing_phone: "3149355555"
+                    mailing_email: "email@mailing.com"
+                    modified_by: null
+                    is_rtb: true
+                    billing_email: "email@billing.com"
+                    agency: null
+                    company_id: null
+                    id: 1
+                    parent_id: null
+                    version: 1
+                    billing_address: "My Billing Address"
+                    parent: null
+                    company: null
+                    category_restriction: false
+                    agency_id: null
+                    approved_credit: 1000
+                    class: "DemandAccount"
+                    age_restriction: true
+                    mailing_phone: "2124843915"
+                    name: "Vungle"
+                    created_at: "2014-03-12T20:48:32+00:00"
+                    spent_credit: 500
+                    modifier: null
+                    parent: { }
+                    agency: { }
+                    company: { }
+                    users: { { } }
+                    preRolls: { { } }
+                    postRolls: { { } }
+                    videos: { { } }
+                    adUnits: { { } }
+                    tpatGroups: { { } }
+                    geoGroups: { { } }
+                    campaigns: { { } }
+                    demandAccounts: { { } }
+                }
                 
             }
 
@@ -126,7 +128,9 @@ Get a single DemandAccount object
 + Request (application/json)
 
         {
-            geo_targetting : false
+            data: {
+                geo_targetting : false
+            }
         }
 
 + Response 200 (application/json)
