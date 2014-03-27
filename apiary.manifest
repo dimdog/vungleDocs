@@ -13,4 +13,6 @@ usersDemandAccounts.apib
 oems.apib
 provinces.apib
 provincesCities.apib
+languages.apib
 ratings.apib
+statuses.apib

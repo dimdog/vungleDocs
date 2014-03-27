@@ -1,11 +1,11 @@
-# Group Ratings
-Ratings can be accessed here, and admins can update / add new ones.
+# Group Statuses
+Statuses can be accessed here, and admins can update / add new ones.
 
-## Ratings Collection [/ratings?limit=limit]
+## Statuses Collection [/statuses?limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
 
-### Retrieve all Ratings [GET]
+### Retrieve all Statuses [GET]
 + Response 200 (application/json)
 
     + Body
@@ -13,11 +13,10 @@ Ratings can be accessed here, and admins can update / add new ones.
                 { 
                 data : {
                     modified_by: null
-                    name: "PG"
-                    minimum_age: 10
+                    name: "Active"
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "Rating"
+                    class: "Status"
                     version: 1
                     modifier: null
                     id: 1
@@ -26,11 +25,10 @@ Ratings can be accessed here, and admins can update / add new ones.
                 {
                  data : {
                     modified_by: null
-                    name: "G"
-                    minimum_age: 5
+                    name: "Paused"
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "Rating"
+                    class: "Status"
                     version: 1
                     modifier: null
                     id: 2
@@ -40,16 +38,16 @@ Ratings can be accessed here, and admins can update / add new ones.
             
 
 
-## Ratings Create [/ratings]
-### Create a Rating [POST]
+## Statuses Create [/statuses]
+### Create a Status [POST]
 + Request (application/json)
 
     
         {
-            data : {
-                name: "R"
-                minimum_age: 17
+            data: {
+                name: "psuedo-archived"
             }
+
         }
 
         
@@ -59,23 +57,22 @@ Ratings can be accessed here, and admins can update / add new ones.
         { 
           data: {
             modified_by: null
-            name: "R"
-            minimum_age: 17
+            name: "psuedo-archived"
             created_at: "2014-03-25T21:30:42+00:00"
             updated_at: "2014-03-25T21:30:42+00:00"
-            class: "Rating"
+            class: "Status"
             version: 1
             modifier: null
             id: 1
           }
         }
 
-## Rating [/ratings/id]
-Get a single Rating object 
+## Status [/statuses/id]
+Get a single Status object 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Rating to perform action with.
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
 
-### Retrieve a Rating [GET]
+### Retrieve a Status [GET]
 + Response 200 (application/json)
 
     + Body
@@ -83,24 +80,23 @@ Get a single Rating object
             {
                 data: {
                   modified_by: null
-                  name: "PG"
-                  minimum_age: 10
+                  name: "psuedo-archived"
                   created_at: "2014-03-25T21:30:42+00:00"
                   updated_at: "2014-03-25T21:30:42+00:00"
-                  class: "Rating"
+                  class: "Status"
                   version: 1
                   modifier: null
                   id: 1
                 }
             }
             
-### Update A Rating [PATCH]
+### Update A Status [PATCH]
 
 + Request (application/json)
 
         {
             data: {
-                name: "R"
+                name: "Inactive"
             }
         }
 + Response 200 (application/json)
@@ -108,18 +104,17 @@ Get a single Rating object
         {
             data : {
               modified_by: null
-              name: "R"
-              minimum_age: 10
+              name: "Inactive"
               created_at: "2014-03-25T21:30:42+00:00"
               updated_at: "2014-03-25T21:30:42+00:00"
-              class: "Rating"
+              class: "Status"
               version: 2
               modifier: null
               id: 1
             }
         }   
 
-### Remove a Rating [DELETE]
+### Remove a Status [DELETE]
 
 + Response 200
 

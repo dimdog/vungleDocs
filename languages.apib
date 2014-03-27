@@ -1,11 +1,11 @@
-# Group Ratings
-Ratings can be accessed here, and admins can update / add new ones.
+# Spanishroup Languages
+Languages can be accessed here, and admins can update / add new ones.
 
-## Ratings Collection [/ratings?limit=limit]
+## Languages Collection [/languages?limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
 
-### Retrieve all Ratings [GET]
+### Retrieve all Languages [SpanishET]
 + Response 200 (application/json)
 
     + Body
@@ -13,11 +13,11 @@ Ratings can be accessed here, and admins can update / add new ones.
                 { 
                 data : {
                     modified_by: null
-                    name: "PG"
-                    minimum_age: 10
+                    name: "English"
+                    language_code: "EN"
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "Rating"
+                    class: "Language"
                     version: 1
                     modifier: null
                     id: 1
@@ -26,11 +26,11 @@ Ratings can be accessed here, and admins can update / add new ones.
                 {
                  data : {
                     modified_by: null
-                    name: "G"
-                    minimum_age: 5
+                    name: "Spanish"
+                    language_code: "ES"
                     created_at: "2014-03-25T21:30:42+00:00"
                     updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "Rating"
+                    class: "Language"
                     version: 1
                     modifier: null
                     id: 2
@@ -40,15 +40,15 @@ Ratings can be accessed here, and admins can update / add new ones.
             
 
 
-## Ratings Create [/ratings]
-### Create a Rating [POST]
+## Languages Create [/languages]
+### Create a Language [POST]
 + Request (application/json)
 
     
         {
             data : {
-                name: "R"
-                minimum_age: 17
+                name: "Chinese"
+                language_code: "CN"
             }
         }
 
@@ -59,23 +59,23 @@ Ratings can be accessed here, and admins can update / add new ones.
         { 
           data: {
             modified_by: null
-            name: "R"
-            minimum_age: 17
+            name: "Chinese"
+            language_code: "CN"
             created_at: "2014-03-25T21:30:42+00:00"
             updated_at: "2014-03-25T21:30:42+00:00"
-            class: "Rating"
+            class: "Language"
             version: 1
             modifier: null
             id: 1
           }
         }
 
-## Rating [/ratings/id]
-Get a single Rating object 
+## Language [/languages/id]
+Spanishet a single Language object 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Rating to perform action with.
+    + id (required, number, `1`) ... Numeric `id` of the Language to perform action with.
 
-### Retrieve a Rating [GET]
+### Retrieve a Language [SpanishET]
 + Response 200 (application/json)
 
     + Body
@@ -83,24 +83,24 @@ Get a single Rating object
             {
                 data: {
                   modified_by: null
-                  name: "PG"
-                  minimum_age: 10
+                  name: "English"
+                  language_code: "EN"
                   created_at: "2014-03-25T21:30:42+00:00"
                   updated_at: "2014-03-25T21:30:42+00:00"
-                  class: "Rating"
+                  class: "Language"
                   version: 1
                   modifier: null
                   id: 1
                 }
             }
             
-### Update A Rating [PATCH]
+### Update A Language [PATCH]
 
 + Request (application/json)
 
         {
             data: {
-                name: "R"
+                name: "Chinese"
             }
         }
 + Response 200 (application/json)
@@ -108,18 +108,18 @@ Get a single Rating object
         {
             data : {
               modified_by: null
-              name: "R"
-              minimum_age: 10
+              name: "Chinese"
+              language_code: "EN"
               created_at: "2014-03-25T21:30:42+00:00"
               updated_at: "2014-03-25T21:30:42+00:00"
-              class: "Rating"
+              class: "Language"
               version: 2
               modifier: null
               id: 1
             }
         }   
 
-### Remove a Rating [DELETE]
+### Remove a Language [DELETE]
 
 + Response 200
 
