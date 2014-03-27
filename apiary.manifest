@@ -3,3 +3,7 @@ bidStrategy.apib
 categories.apib
 categoriesCategories.apib
 cities.apib
+companies.apib
+connectionTypes.apib
+countries.apib
+countriesProvinces.apib
