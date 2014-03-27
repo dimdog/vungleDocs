@@ -10,3 +10,6 @@ countriesProvinces.apib
 deliveryMethods.apib
 users.apib
 usersDemandAccounts.apib
+oems.apib
+provinces.apib
+provincesCities.apib
