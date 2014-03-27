@@ -12,6 +12,7 @@ users.apib
 usersDemandAccounts.apib
 oems.apib
 platforms.apib
+platformsPlatformVersions.apib
 platformVersions.apib
 provinces.apib
 provincesCities.apib
