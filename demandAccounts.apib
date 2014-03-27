@@ -3,7 +3,7 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
 ## Demand Accounts Collection [/demandAccounts?include=includes&limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`,`users_proxy or `all`
+    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `demandAccounts`, or `all`
 
 ### List all Demand Accounts [GET]
 + Response 200 (application/json)
@@ -35,12 +35,6 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
                     created_at: "2014-03-12T20:48:32+00:00"
                     spent_credit: 500
                     modifier: null
-                    financial_read: False
-                    financial_write: True
-                    manager: False
-                    read: False
-                    reports_read: False
-                    write: True
                 }
             },
             {
@@ -69,12 +63,6 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
                     created_at: "2014-03-12T20:48:32+00:00"
                     spent_credit: null
                     modifier: null
-                    financial_read: False
-                    financial_write: True
-                    manager: False
-                    read: False
-                    reports_read: False
-                    write: True
                 }
             }
         ]
@@ -84,7 +72,7 @@ Get a single DemandAccount object
 
 + Parameters  
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `    videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `children`,`users_proxy or `all`
+    + includes (optional, string, `'parent'`) ... `includes` The relations that you want returned as part of the object. Options are `parent`,`agency`, `company`, `users`, `preRolls`, `postRolls`, `videos`, `adUnits`, `tpatGroups`, `geoGroups`, `campaigns, `demandAccounts`, or `all`
 
 ### Get a single Demand Account [GET]
 + Response 200 (application/json)
@@ -119,12 +107,19 @@ Get a single DemandAccount object
                 created_at: "2014-03-12T20:48:32+00:00"
                 spent_credit: 500
                 modifier: null
-                financial_read: False
-                financial_write: True
-                manager: False
-                read: False
-                reports_read: False
-                write: True
+                parent: { }
+                agency: { }
+                company: { }
+                users: { { } }
+                preRolls: { { } }
+                postRolls: { { } }
+                videos: { { } }
+                adUnits: { { } }
+                tpatGroups: { { } }
+                geoGroups: { { } }
+                campaigns: { { } }
+                demandAccounts: { { } }
+                
             }
 
 ### Update a DemandAccount [PATCH]
@@ -139,54 +134,33 @@ Get a single DemandAccount object
     + Body
     
             {
-                geo_targetting: false
-                ISULists: { }
-                videos: { }
-                mailing_address: "My Mailing Address"
-                users_proxy: { }
-                updated_at: "2014-03-12T20:48:32+00:00"
-                is_agency: false
-                billing_phone: "3149355555"
-                mailing_email: "email@mailing.com"
-                adUnits: { }
-                modified_by: null
-                is_rtb: true
-                billing_email: "email@billing.com"
-                SiteIDLists: { }
-                agency: null
-                company_id: null
-                geoGroups: { }
-                id: 1
-                parent_id: null
-                version: 1
-                postRolls: { }
-                tpatGroups: { }
-                billing_address: "My Billing Address"
-                users: { }
-                parent: null
-                company: null
-                category_restriction: false
-                agency_id: null
-                campaigns: { }
-                approved_credit: 1000
-                class: "DemandAccount"
-                age_restriction: true
-                mailing_phone: "2124843915"
-                name: "Vungle"
-                created_at: "2014-03-12T20:48:32+00:00"
-                children: { }
-                spent_credit: 500
-                preRolls: { }
-                demandAccounts: { }
-                modifier: null
-                financial_read: False
-                financial_write: True
-                manager: False
-                read: False
-                reports_read: False
-                write: True
+                data: {
+                    geo_targetting: false
+                    mailing_address: "My Mailing Address"
+                    updated_at: "2014-03-12T20:48:32+00:00"
+                    is_agency: false
+                    billing_phone: "3149355555"
+                    mailing_email: "email@mailing.com"
+                    modified_by: null
+                    is_rtb: true
+                    billing_email: "email@billing.com"
+                    company_id: null
+                    id: 1
+                    parent_id: null
+                    version: 1
+                    billing_address: "My Billing Address"
+                    category_restriction: false
+                    agency_id: null
+                    approved_credit: 1000
+                    class: "DemandAccount"
+                    age_restriction: true
+                    mailing_phone: "2124843915"
+                    name: "Vungle"
+                    created_at: "2014-03-12T20:48:32+00:00"
+                    spent_credit: 500
+                    modifier: null
+                }
             }
-
 
 ##  Delete a DemandAccount [/demandAccounts/id]
 ### Remove a DemandAccount [DELETE]
