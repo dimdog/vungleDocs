@@ -12,6 +12,7 @@ devices.apib
 users.apib
 usersDemandAccounts.apib
 oems.apib
+oemsDevices.apib
 platforms.apib
 platformsPlatformVersions.apib
 platformVersions.apib
