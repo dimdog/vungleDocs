@@ -7,7 +7,7 @@ companies.apib
 connectionTypes.apib
 countries.apib
 countriesProvinces.apib
-deliveryMethods.apib
+demandAccounts.apib
 users.apib
 usersDemandAccounts.apib
 oems.apib
