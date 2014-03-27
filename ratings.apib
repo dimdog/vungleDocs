@@ -38,38 +38,6 @@ Ratings can be accessed here, and admins can update / add new ones.
                 }
             ]
             
-
-
-## Ratings Create [/ratings]
-### Create a Rating [POST]
-+ Request (application/json)
-
-    
-        {
-            data : {
-                name: "R"
-                minimum_age: 17
-            }
-        }
-
-        
-
-+ Response 200 (application/json)
-
-        { 
-          data: {
-            modified_by: null
-            name: "R"
-            minimum_age: 17
-            created_at: "2014-03-25T21:30:42+00:00"
-            updated_at: "2014-03-25T21:30:42+00:00"
-            class: "Rating"
-            version: 1
-            modifier: null
-            id: 1
-          }
-        }
-
 ## Rating [/ratings/id]
 Get a single Rating object 
 + Parameters
@@ -93,36 +61,3 @@ Get a single Rating object
                   id: 1
                 }
             }
-            
-### Update A Rating [PATCH]
-
-+ Request (application/json)
-
-        {
-            data: {
-                name: "R"
-            }
-        }
-+ Response 200 (application/json)
-
-        {
-            data : {
-              modified_by: null
-              name: "R"
-              minimum_age: 10
-              created_at: "2014-03-25T21:30:42+00:00"
-              updated_at: "2014-03-25T21:30:42+00:00"
-              class: "Rating"
-              version: 2
-              modifier: null
-              id: 1
-            }
-        }   
-
-### Remove a Rating [DELETE]
-
-+ Response 200
-
-
-
-

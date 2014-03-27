@@ -36,37 +36,6 @@ Statuses can be accessed here, and admins can update / add new ones.
                 }
             ]
             
-
-
-## Statuses Create [/statuses]
-### Create a Status [POST]
-+ Request (application/json)
-
-    
-        {
-            data: {
-                name: "psuedo-archived"
-            }
-
-        }
-
-        
-
-+ Response 200 (application/json)
-
-        { 
-          data: {
-            modified_by: null
-            name: "psuedo-archived"
-            created_at: "2014-03-25T21:30:42+00:00"
-            updated_at: "2014-03-25T21:30:42+00:00"
-            class: "Status"
-            version: 1
-            modifier: null
-            id: 1
-          }
-        }
-
 ## Status [/statuses/id]
 Get a single Status object 
 + Parameters
@@ -89,35 +58,3 @@ Get a single Status object
                   id: 1
                 }
             }
-            
-### Update A Status [PATCH]
-
-+ Request (application/json)
-
-        {
-            data: {
-                name: "Inactive"
-            }
-        }
-+ Response 200 (application/json)
-
-        {
-            data : {
-              modified_by: null
-              name: "Inactive"
-              created_at: "2014-03-25T21:30:42+00:00"
-              updated_at: "2014-03-25T21:30:42+00:00"
-              class: "Status"
-              version: 2
-              modifier: null
-              id: 1
-            }
-        }   
-
-### Remove a Status [DELETE]
-
-+ Response 200
-
-
-
-
