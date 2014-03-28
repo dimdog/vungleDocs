@@ -9,8 +9,9 @@ countries.apib
 countriesProvinces.apib
 demandAccounts.apib
 devices.apib
-users.apib
-usersDemandAccounts.apib
+languages.apib
+metaTags.apib
+metaTagsMetaTags.apib
 oems.apib
 oemsDevices.apib
 platforms.apib
@@ -18,6 +19,7 @@ platformsPlatformVersions.apib
 platformVersions.apib
 provinces.apib
 provincesCities.apib
-languages.apib
 ratings.apib
 statuses.apib
+users.apib
+usersDemandAccounts.apib

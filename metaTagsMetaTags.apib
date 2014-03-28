@@ -1,0 +1,98 @@
+# Group MetaTags/MetaTags
+`parent` is the metaTag that the current metaTag is a sub-metaTag of.
+
+
+## SubmetaTags Collection [/metaTags/:id/metaTags?include=includes&limit=limit]
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the parent MetaTag to perform action with.
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `parent` or `all`
+
+### Retrieve all SubmetaTags [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "Games"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "MetaTag"
+                    iab_id: 5
+                    parent_id: :id
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "Newsstand"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "MetaTag"
+                    iab_id: null 
+                    parent_id: :id
+                    version: 1
+                    modifier: null
+                    id: 3
+                    }
+                }
+            ]
+            
+## SubmetaTag [/metaTags/:id/metaTags/:subid?include=includes]
+Get a single SubmetaTag object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the MetaTag to perform action with. Has example value.
+    + subid (required, number, `2`) ... Numeric `id` of the SubmetaTag to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `parent`, or `all`
+
+### Retrieve a SubmetaTag [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Newsstand"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "MetaTag"
+                  iab_id: 5 
+                  parent_id: :id
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+            
+### Make a MetaTag a SubmetaTag [POST]
+
++ Response 200 (application/json)
+
+        {
+            data : {
+              modified_by: null
+              name: "New MetaTag"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "MetaTag"
+              iab_id: 5 
+              parent_id: :id
+              version: 2
+              modifier: null
+              id: :subid
+            }
+        }   
+
+### Remove a SubmetaTag [DELETE]
+
++ Response 200
+
+
+
+

@@ -1,0 +1,138 @@
+# Group MetaTags
+MetaTags can be accessed here, and admins can update / add new ones. 
+MetaTags can have sub-metaTags, they can be accessed via `metaTags` on a MetaTag object. There is currently only 2 levels of metaTags allowed. 
+`parent` is either null or the metaTag that the current metaTag is a sub-metaTag of.
+
+
+## MetaTags Collection [/metaTags?include=includes&limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `metaTags`,`parent` or `all`
+
+### Retrieve all MetaTags [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "Games"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "MetaTag"
+                    iab_id: 5
+                    parent_id: null
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "Newsstand"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "MetaTag"
+                    iab_id: null 
+                    parent_id: 1
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+
+
+## MetaTags Create [/metaTags]
+### Create a MetaTag [POST]
++ Request (application/json)
+
+    
+        {
+            data : {
+                name: "Adventure"
+                iab_id: 5
+            }
+
+        }
+
+        
+
++ Response 200 (application/json)
+
+        { 
+          data: {
+            modified_by: null
+            name: "Adventure"
+            created_at: "2014-03-25T21:30:42+00:00"
+            updated_at: "2014-03-25T21:30:42+00:00"
+            class: "MetaTag"
+            iab_id: 5 
+            parent_id: null
+            version: 1
+            modifier: null
+            id: 1
+          }
+        }
+
+## MetaTag [/metaTags/id?include=includes]
+Get a single MetaTag object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the MetaTag to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `metaTags`, `parent`, or `all`
+
+### Retrieve a MetaTag [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Newsstand"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "MetaTag"
+                  iab_id: 5 
+                  parent_id: null
+                  version: 1
+                  modifier: null
+                  id: 1
+                  metaTags: {{}}
+                }
+            }
+            
+### Update A MetaTag [PATCH]
+
++ Request (application/json)
+
+        {
+            data: {
+                name: "New MetaTag"
+            }
+        }
++ Response 200 (application/json)
+
+        {
+            data : {
+              modified_by: null
+              name: "New MetaTag"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "MetaTag"
+              version: 2
+              modifier: null
+              id: 1
+            }
+        }   
+
+### Remove a MetaTag [DELETE]
+
++ Response 200
+
+
+
+
