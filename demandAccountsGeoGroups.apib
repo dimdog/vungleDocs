@@ -1,0 +1,69 @@
+# Group DemandAccounts/GeoGroups
+GeoGroups for a DemandAccount can be accessed and created here. 
+
+## GeoGroup [/demandAccounts/:id/geoGroups/?include=includes]
+Get a single GeoGroup object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `provinces`, `cities`, `countries`, or `all`
+
+### Retrieve all GeoGroups [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    data: {
+                      modified_by: null
+                      name: "USA + UK"
+                      demandAccount_id: 1
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "GeoGroup"
+                      version: 1
+                      modifier: null
+                      id: 1
+                    }
+                },
+                {
+                    data: {
+                      modified_by: null
+                      name: "APAC"
+                      demandAccount_id: 1
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "GeoGroup"
+                      version: 1
+                      modifier: null
+                      id: 2
+                    }
+                }
+            ]
+
+### Create A GeoGroup [POST]
+
+
++ Request (application/json)
+
+        {
+            data: {
+               name: "Anglophones" 
+            }
+        }
+
++ Response 200 (application/json)
+
+        {
+            data: {
+              modified_by: null
+              name: "Anglophones"
+              demandAccount_id: 1
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "GeoGroup"
+              version: 1
+              modifier: null
+              id: 10
+            }
+        }

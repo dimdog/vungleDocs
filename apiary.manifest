@@ -9,6 +9,7 @@ countries.apib
 countriesProvinces.apib
 demandAccounts.apib
 demandAccountsUsers.apib
+demandAccountsGeoGroups.apib
 devices.apib
 geoGroups.apib
 geoGroupsCities.apib

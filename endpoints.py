@@ -23,7 +23,7 @@ DemandAccounts Endpoints
 
 
 
-/campaigns/:id (GET,PATCH,DELETE) Get the campaign, update the campaign, delete the campaign <-- Talk to Dan about Delete
+/campaigns/:id (GET,PATCH,DELETE) Get the campaign, update the campaign, delete the campaign - no cascade.
 /campaigns/:id/adGroups (GET, POST) GET = Get all the adgroups, POST = create a new adgroup on that campaign
 /campaigns/:id/geoGroups (GET)
 /campaigns/:id/geoGroups/:id (GET, POST, DELETE)
