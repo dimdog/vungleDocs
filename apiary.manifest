@@ -10,6 +10,10 @@ countriesProvinces.apib
 demandAccounts.apib
 demandAccountsUsers.apib
 devices.apib
+geoGroups.apib
+geoGroupsCities.apib
+geoGroupsCountries.apib
+geoGroupsProvinces.apib
 languages.apib
 metaTags.apib
 metaTagsMetaTags.apib

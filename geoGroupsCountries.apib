@@ -1,0 +1,89 @@
+# Group GeoGroups/Countries
+
+## Geogroup Country Collection [/geoGroups/:id/countries?include=includes&limit=limit]
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the parent GeoGroup to perform action with.
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `provinces`, or `all`
+
+### Retrieve all Countries that are part of a Geogroup [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "United States"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Country"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "France"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Country"
+                    version: 1
+                    modifier: null 
+                    id: 2
+                    }
+                }
+            ]
+            
+## Country [/geoGroups/:id/countries/:subid?include=includes]
+Get a single Country on a geoGroup object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the parent GeoGroup to perform action with.
+    + subid (required, number, `2`) ... Numeric `id` of the Country to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `provinces`, or `all`
+
+### Retrieve a Country [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+               data : {
+                  modified_by: null
+                  name: "France"
+                  provinces: { { } }
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Country"
+                  version: 1
+                  modifier: null
+                  id: 2
+                }
+            }
+            
+### Add a Country to a GeoGroup [POST]
+
++ Response 200 (application/json)
+
+        {
+           data : {
+              modified_by: null
+              name: "France"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "Country"
+              version: 1
+              modifier: null
+              id: 2
+            }
+        }   
+
+### Remove a Country from a GeoGroup [DELETE]
+
++ Response 200
+
+
+
+
