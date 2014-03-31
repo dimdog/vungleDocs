@@ -21,6 +21,8 @@ demandAccounts.apib
 demandAccountsCampaigns.apib
 demandAccountsUsers.apib
 demandAccountsVideos.apib
+demandAccountsPostRolls.apib
+demandAccountsPreRolls.apib
 demandAccountsGeoGroups.apib
 devices.apib
 geoGroups.apib
