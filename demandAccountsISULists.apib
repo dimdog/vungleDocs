@@ -1,0 +1,70 @@
+# Group DemandAccounts/ISULists
+ISULists for a DemandAccount can be accessed and created here. 
+
+## ISUList [/demandAccounts/:id/isuLists/?include=includes]
+Get all ISULists that are associated with a DemandAccount 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the DemandAccount to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `adUnits`, `modifier`, `demandAcccount`,  or `all` 
+
+### Retrieve all ISULists [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    data: {
+                      modified_by: null
+                      name: "ISUList1"
+                      url: "http://url.com"
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "ISUList"
+                      version: 1
+                      modifier: null
+                      id: 1
+                    }
+                },
+                {
+                    data: {
+                      modified_by: null
+                      name: "ISUList2"
+                      url: "http://url.com"
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "ISUList"
+                      version: 1
+                      modifier: null
+                      id: 2
+                    }
+                }
+            ]
+
+### Create A ISUList [POST]
+
+
++ Request (application/json)
+
+        {
+            data: {
+               name: "Anglophones" 
+               url: "http://url.com"
+            }
+        }
+
++ Response 200 (application/json)
+
+        {
+            data: {
+              modified_by: null
+              name: "Anglophones"
+              url: "http://url.com"
+              created_at: "2014-03-25T21:30:42+00:00"
+              updated_at: "2014-03-25T21:30:42+00:00"
+              class: "ISUList"
+              version: 1
+              modifier: null
+              id: 10
+            }
+        }
