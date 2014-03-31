@@ -1,0 +1,95 @@
+# Group AdGroups/PlatformVersions
+PlatformVersions can be accessed and updated here.
+
+## PlatformVersions Collection [/adGroups/:id/platformVersions/?include=includes]
+Get all PlatformVersions that are part of a AdGroup 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, or `all`
+
+### Retrieve all PlatformVersions for a AdGroup [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                {
+                    data: {
+                      modified_by: null
+                      platform_version: 7
+                      platform_id: 1
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "PlatformVersion"
+                      version: 1
+                      modifier: null
+                      id: 1
+                    }
+                },
+                    data: {
+                      modified_by: null
+                      platform_version: 7.1
+                      platform_id: 1
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "PlatformVersion"
+                      version: 1
+                      modifier: null
+                      id: 2
+                    }
+            ]
+
+## PlatformVersion [/adGroups/:id/platformVersion/:subid/?include=includes]
+Get a PlatformVersions that is associated with a AdGroup 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the PlatformVersion to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, or `all`
+
+### Retrieve a PlatformVersion [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  platform_version: 7.1
+                  platform_id: 1
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PlatformVersion"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Attach A PlatformVersion to a AdGroup [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  platform_version: 7.1
+                  platform_id: 1
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PlatformVersion"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove a PlatformVersion from a AdGroup [DELETE]
+
++ Response 200

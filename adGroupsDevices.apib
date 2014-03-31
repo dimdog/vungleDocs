@@ -1,0 +1,129 @@
+# Group AdGroups/Devices
+Devices can be accessed and updated here.
+
+## Devices Collection [/adGroups/:id/devices/?include=includes]
+Get all Devices that are part of a AdGroup 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, `oem`, or `all`
+
+### Retrieve all Devices for a AdGroup [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "iPhone 5"
+                    is_phone: true
+                    is_tablet: false
+                    ppi: 163
+                    res_height: 480
+                    res_width: 320
+                    size: 3.5 
+                    platform_id: 1
+                    oem_id: 2
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Device"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "Galaxy Note"
+                    is_phone: false
+                    is_tablet: true
+                    ppi: 100
+                    res_height: 1080
+                    res_width: 960
+                    size: 3.14
+                    platform_id: 2
+                    oem_id: 4
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Device"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+
+## Device [/adGroups/:id/device/:subid/?include=includes]
+Get a Devices that is associated with a AdGroup 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the Device to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, `oem`, or `all`
+
+### Retrieve a Device [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "X"
+                  is_phone: true 
+                  is_tablet: false 
+                  ppi: 9000
+                  res_height: 720
+                  res_width: 480
+                  size: .5
+                  platform_id: 2
+                  platform: { }
+                  oem_id: 6
+                  oem: { }
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Device"
+                  version: 1
+                  modifier: null
+                  id: subid
+                }
+            }
+
+### Attach A Device to a AdGroup [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "X"
+                  is_phone: true 
+                  is_tablet: false 
+                  ppi: 9000
+                  res_height: 720
+                  res_width: 480
+                  size: .5
+                  platform_id: 2
+                  platform: { }
+                  oem_id: 6
+                  oem: { }
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Device"
+                  version: 1
+                  modifier: null
+                  id: subid
+                }
+            }
+
+### Remove a Device from a AdGroup [DELETE]
+
++ Response 200

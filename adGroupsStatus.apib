@@ -1,12 +1,12 @@
-# Group Campaigns/Status
-The Status of a Campaign can be accessed and updated here.
+# Group AdGroups/Status
+The Status of a AdGroup can be accessed and updated here.
 
-## Status [/campaigns/:id/status/?include=includes]
-Get the Status that the Campaign is using 
+## Status [/adGroups/:id/status/?include=includes]
+Get the Status that the AdGroup is using 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
 
-### Retrieve the Status for a Campaign [GET]
+### Retrieve the Status for a AdGroup [GET]
 + Response 200 (application/json)
 
     + Body
@@ -23,10 +23,10 @@ Get the Status that the Campaign is using
                 }
             }
 
-## Status [/campaigns/:id/status/:subid/?include=includes]
-Get the Status that the campaign is using by ID 
+## Status [/adGroups/:id/status/:subid/?include=includes]
+Get the Status that the adGroup is using by ID 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
     + subid (required, number, `1`) ... Numeric `id` of the Status to perform action with. Has example value.
 
 ### Retrieve a Status by ID [GET]
@@ -47,7 +47,7 @@ Get the Status that the campaign is using by ID
                 }
             }
 
-### Change the Status that a Campaign uses [POST]
+### Change the Status that a AdGroup uses [POST]
 
 
 + Request (application/json)
@@ -72,6 +72,6 @@ Get the Status that the campaign is using by ID
                 }
             }
 
-### Remove a Status from a Campaign [DELETE]
+### Remove a Status from a AdGroup [DELETE]
 
 + Response 200

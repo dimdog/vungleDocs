@@ -6,38 +6,23 @@ Get the Rating that the Campaign is using
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
 
-### Retrieve all Ratings for a Campaign [GET]
+### Retrieve the Rating for a Campaign [GET]
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
-                    modified_by: null
-                    name: "PG"
-                    minimum_age: 10
-                    created_at: "2014-03-25T21:30:42+00:00"
-                    updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "Rating"
-                    version: 1
-                    modifier: null
-                    id: 1
-                    }
-                },
-                {
-                 data : {
-                    modified_by: null
-                    name: "G"
-                    minimum_age: 5
-                    created_at: "2014-03-25T21:30:42+00:00"
-                    updated_at: "2014-03-25T21:30:42+00:00"
-                    class: "Rating"
-                    version: 1
-                    modifier: null
-                    id: 2
-                    }
+            { 
+            data : {
+                modified_by: null
+                name: "PG"
+                minimum_age: 10
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "Rating"
+                version: 1
+                modifier: null
+                id: 1
                 }
-            ]
+            }
 
 ## Rating [/campaigns/:id/rating/:subid/?include=includes]
 Get the Rating that the campaign is using by ID 
