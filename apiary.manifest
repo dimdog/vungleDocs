@@ -18,6 +18,7 @@ connectionTypes.apib
 countries.apib
 countriesProvinces.apib
 demandAccounts.apib
+demandAccountsAdUnits.apib
 demandAccountsCampaigns.apib
 demandAccountsUsers.apib
 demandAccountsVideos.apib
