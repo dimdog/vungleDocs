@@ -1,13 +1,13 @@
-# Group DemandAccounts/GeoGroups
-GeoGroups for a DemandAccount can be accessed and created here. 
+# Group DemandAccounts/PostRolls
+PostRolls for a DemandAccount can be accessed and created here. 
 
-## GeoGroup [/demandAccounts/:id/geoGroups/?include=includes]
-Get all GeoGroups that are associated with a DemandAccount 
+## PostRoll [/demandAccounts/:id/videos/?include=includes]
+Get all PostRolls that are associated with a DemandAccount 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the DemandAccount to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `provinces`, `cities`, `countries`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `adUnits`, `modifier`, `demandAcccount`,  or `all` 
 
-### Retrieve all GeoGroups [GET]
+### Retrieve all PostRolls [GET]
 + Response 200 (application/json)
 
     + Body
@@ -16,11 +16,11 @@ Get all GeoGroups that are associated with a DemandAccount
                 {
                     data: {
                       modified_by: null
-                      name: "USA + UK"
-                      demandAccount_id: 1
+                      name: "PostRoll1"
+                      url: "http://url.com"
                       created_at: "2014-03-25T21:30:42+00:00"
                       updated_at: "2014-03-25T21:30:42+00:00"
-                      class: "GeoGroup"
+                      class: "PostRoll"
                       version: 1
                       modifier: null
                       id: 1
@@ -29,11 +29,11 @@ Get all GeoGroups that are associated with a DemandAccount
                 {
                     data: {
                       modified_by: null
-                      name: "APAC"
-                      demandAccount_id: 1
+                      name: "PostRoll2"
+                      url: "http://url.com"
                       created_at: "2014-03-25T21:30:42+00:00"
                       updated_at: "2014-03-25T21:30:42+00:00"
-                      class: "GeoGroup"
+                      class: "PostRoll"
                       version: 1
                       modifier: null
                       id: 2
@@ -41,7 +41,7 @@ Get all GeoGroups that are associated with a DemandAccount
                 }
             ]
 
-### Create A GeoGroup [POST]
+### Create A PostRoll [POST]
 
 
 + Request (application/json)
@@ -49,6 +49,7 @@ Get all GeoGroups that are associated with a DemandAccount
         {
             data: {
                name: "Anglophones" 
+               url: "http://url.com"
             }
         }
 
@@ -58,10 +59,10 @@ Get all GeoGroups that are associated with a DemandAccount
             data: {
               modified_by: null
               name: "Anglophones"
-              demandAccount_id: 1
+              url: "http://url.com"
               created_at: "2014-03-25T21:30:42+00:00"
               updated_at: "2014-03-25T21:30:42+00:00"
-              class: "GeoGroup"
+              class: "PostRoll"
               version: 1
               modifier: null
               id: 10

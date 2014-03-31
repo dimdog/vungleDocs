@@ -20,6 +20,9 @@ countriesProvinces.apib
 demandAccounts.apib
 demandAccountsCampaigns.apib
 demandAccountsUsers.apib
+demandAccountsPostRolls.apib
+demandAccountsPreRolls.apib
+demandAccountsVideos.apib
 demandAccountsGeoGroups.apib
 devices.apib
 geoGroups.apib
