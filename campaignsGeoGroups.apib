@@ -77,8 +77,24 @@ Get a GeoGroups that is associated with a Campaign
 
 + Response 200 (application/json)
 
-        {
-        }
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "USA + UK"
+                  demandAccount_id: :id
+                  cities: { { } }
+                  provinces: { { } }
+                  countries: { { } }
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "GeoGroup"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
 
 ### Remove a GeoGroup from a Campaign [DELETE]
 
