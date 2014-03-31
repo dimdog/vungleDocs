@@ -1,0 +1,79 @@
+# Group AdGroups/Language
+The Language of a AdGroup can be accessed and updated here.
+
+## Language [/adGroups/:id/language/?include=includes]
+Get the Language that the AdGroup is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+
+### Retrieve the Language for a AdGroup [GET]
++ Response 200 (application/json)
+
+    + Body
+            { 
+            data : {
+                modified_by: null
+                name: "English"
+                language_code: "EN"
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "Language"
+                version: 1
+                modifier: null
+                id: 1
+                }
+            }
+
+## Language [/adGroups/:id/language/:subid/?include=includes]
+Get the Language that the adGroup is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the Language to perform action with. Has example value.
+
+### Retrieve a Language by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "English"
+                  language_code: "EN"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Language"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+
+### Change the Language that a AdGroup uses [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "English"
+                  language_code: "EN"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Language"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+
+### Remove a Language from a AdGroup [DELETE]
+
++ Response 200

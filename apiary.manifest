@@ -4,6 +4,7 @@ adGroupsConnectionTypes.apib
 adGroupsDevices.apib
 adGroupsGeoGroups.apib
 adGroupsISULists.apib
+adGroupsLanguage.apib
 adGroupsPlatformVersions.apib
 adGroupsRating.apib
 adGroupsSiteIDLists.apib
