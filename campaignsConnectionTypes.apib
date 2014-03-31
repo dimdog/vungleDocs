@@ -1,0 +1,79 @@
+# Group Campaigns/ConnectionTypes
+ConnectionTypes can be accessed and updated here.
+
+## ConnectionTypes Collection [/campaigns/:id/connectionTypes/?include=includes]
+Get all ConnectionTypes that are part of a Campaign 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
+
+### Retrieve all ConnectionTypes for a Campaign [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "2G/EDGE"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "ConnectionType"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "3G"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "ConnectionType"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+
+## ConnectionType [/campaigns/:id/connectionType/:subid/?include=includes]
+Get a ConnectionTypes that is associated with a Campaign 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the ConnectionType to perform action with. Has example value.
+
+### Retrieve a ConnectionType [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Ansible"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "ConnectionType"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+
+### Attach A ConnectionType to a Campaign [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+        {
+        }
+
+### Remove a ConnectionType from a Campaign [DELETE]
+
++ Response 200

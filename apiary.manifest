@@ -2,6 +2,14 @@ auth.apib
 bidStrategy.apib
 campaigns.apib
 campaignsGeoGroups.apib
+campaignsPlatformVersions.apib
+campaignsDevices.apib
+campaignsConnectionTypes.apib
+campaignsCategories.apib
+campaignsLanguages.apib
+campaignsBidStrategy.apib
+campaignsRating.apib
+campaignsStatus.apib
 categories.apib
 categoriesCategories.apib
 cities.apib

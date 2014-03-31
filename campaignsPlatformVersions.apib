@@ -1,13 +1,13 @@
-# Group Campaigns/GeoGroups
-GeoGroups can be accessed and updated here.
+# Group Campaigns/PlatformVersions
+PlatformVersions can be accessed and updated here.
 
-## GeoGroups Collection [/campaigns/:id/geoGroups/?include=includes]
-Get all GeoGroups that are part of a Campaign 
+## PlatformVersions Collection [/campaigns/:id/platformVersions/?include=includes]
+Get all PlatformVersions that are part of a Campaign 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the GeoGroup. Options are: `modifier`, `provinces`, `cities`, `countries`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, or `all`
 
-### Retrieve all GeoGroups for a Campaign [GET]
+### Retrieve all PlatformVersions for a Campaign [GET]
 + Response 200 (application/json)
 
     + Body
@@ -15,11 +15,11 @@ Get all GeoGroups that are part of a Campaign
                 {
                     data: {
                       modified_by: null
-                      name: "USA + UK"
-                      demandAccount_id: 4
+                      platform_version: 7
+                      platform_id: 1
                       created_at: "2014-03-25T21:30:42+00:00"
                       updated_at: "2014-03-25T21:30:42+00:00"
-                      class: "GeoGroup"
+                      class: "PlatformVersion"
                       version: 1
                       modifier: null
                       id: 1
@@ -27,25 +27,25 @@ Get all GeoGroups that are part of a Campaign
                 },
                     data: {
                       modified_by: null
-                      name: "APAC"
-                      demandAccount_id: 4
+                      platform_version: 7.1
+                      platform_id: 1
                       created_at: "2014-03-25T21:30:42+00:00"
                       updated_at: "2014-03-25T21:30:42+00:00"
-                      class: "GeoGroup"
+                      class: "PlatformVersion"
                       version: 1
                       modifier: null
                       id: 2
                     }
             ]
 
-## GeoGroup [/campaigns/:id/geoGroup/:subid/?include=includes]
-Get a GeoGroups that is associated with a Campaign 
+## PlatformVersion [/campaigns/:id/platformVersion/:subid/?include=includes]
+Get a PlatformVersions that is associated with a Campaign 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
-    + subid (required, number, `1`) ... Numeric `id` of the GeoGroup to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the GeoGroup. Options are: `modifier`, `provinces`, `cities`, `countries`, or `all`
+    + subid (required, number, `1`) ... Numeric `id` of the PlatformVersion to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `platform`, or `all`
 
-### Retrieve a GeoGroup [GET]
+### Retrieve a PlatformVersion [GET]
 + Response 200 (application/json)
 
     + Body
@@ -53,21 +53,18 @@ Get a GeoGroups that is associated with a Campaign
             {
                 data: {
                   modified_by: null
-                  name: "USA + UK"
-                  demandAccount_id: :id
-                  cities: { { } }
-                  provinces: { { } }
-                  countries: { { } }
+                  platform_version: 7.1
+                  platform_id: 1
                   created_at: "2014-03-25T21:30:42+00:00"
                   updated_at: "2014-03-25T21:30:42+00:00"
-                  class: "GeoGroup"
+                  class: "PlatformVersion"
                   version: 1
                   modifier: null
                   id: :subid
                 }
             }
 
-### Attach A GeoGroup to a Campaign [POST]
+### Attach A PlatformVersion to a Campaign [POST]
 
 
 + Request (application/json)
@@ -80,6 +77,6 @@ Get a GeoGroups that is associated with a Campaign
         {
         }
 
-### Remove a GeoGroup from a Campaign [DELETE]
+### Remove a PlatformVersion from a Campaign [DELETE]
 
 + Response 200
