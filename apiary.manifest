@@ -3,8 +3,10 @@ adGroupsCategories.apib
 adGroupsConnectionTypes.apib
 adGroupsDevices.apib
 adGroupsGeoGroups.apib
+adGroupsISULists.apib
 adGroupsPlatformVersions.apib
 adGroupsRating.apib
+adGroupsSiteIDLists.apib
 adGroupsStatus.apib
 auth.apib
 bidStrategy.apib
