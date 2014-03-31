@@ -1,6 +1,7 @@
 auth.apib
 bidStrategy.apib
 campaigns.apib
+campaignsGeoGroups.apib
 categories.apib
 categoriesCategories.apib
 cities.apib
