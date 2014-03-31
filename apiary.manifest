@@ -8,6 +8,7 @@ connectionTypes.apib
 countries.apib
 countriesProvinces.apib
 demandAccounts.apib
+demandAccountsCampaigns.apib
 demandAccountsUsers.apib
 demandAccountsGeoGroups.apib
 devices.apib
