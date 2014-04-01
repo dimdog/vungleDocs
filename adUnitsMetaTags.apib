@@ -1,0 +1,94 @@
+# Group AdUnits/MetaTags
+The MetaTags of a AdUnit can be accessed and updated here.
+
+## MetaTags [/adUnits/:id/metaTags/?include=includes]
+Get the MetaTags that the AdUnit is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+
+### Retrieve the MetaTags for a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+            [
+                { 
+                data : {
+                    modified_by: null
+                    name: "Games"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "MetaTag"
+                    parent_id: null
+                    version: 1
+                    modifier: null
+                    id: 1
+                    }
+                },
+                {
+                 data : {
+                    modified_by: null
+                    name: "Newsstand"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "MetaTag"
+                    parent_id: 1
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                }
+            ]
+            
+## MetaTags [/adUnits/:id/metaTags/:subid/?include=includes]
+Get a MetaTag that the adUnit is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the MetaTags to perform action with. Has example value.
+
+### Retrieve a MetaTags by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Newsstand"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "MetaTag"
+                  parent_id: 1
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Attach a new MetaTag to an AdUnit [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "Newsstand"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "MetaTag"
+                  parent_id: 1
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove a MetaTag from a AdUnit [DELETE]
+
++ Response 200

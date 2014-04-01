@@ -1,0 +1,86 @@
+# Group AdUnits/Category
+The Category of a AdUnit can be accessed and updated here.
+
+## Category [/adUnits/:id/category/?include=includes]
+Get the Category that the AdUnit is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `categories`,`parent` or `all`
+
+### Retrieve the Category for a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+            { 
+            data : {
+                modified_by: null
+                name: "Games"
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "Category"
+                iab_id: 5
+                parent_id: null
+                version: 1
+                modifier: null
+                id: 1
+                }
+            }
+
+## Category [/adUnits/:id/category/:subid/?include=includes]
+Get the Category that the adUnit is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the Category to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `categories`,`parent` or `all`
+
+### Retrieve the Category by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Games"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Category"
+                  iab_id: 5
+                  parent_id: null
+                  version: 1
+                  modifier: null
+                  id: :subid
+                  categories: { { } }
+                  parent: { }
+                }
+            }
+
+### Change the Category that an AdUnit uses [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "Games"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Category"
+                  iab_id: 5
+                  parent_id: null
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove the Category from an AdUnit [DELETE]
+
++ Response 200

@@ -9,9 +9,11 @@ adGroupsPlatformVersions.apib
 adGroupsRating.apib
 adGroupsSiteIDLists.apib
 adGroupsStatus.apib
+adUnitsCategory.apib
 adUnitsLanguage.apib
-adUnitsPostRolls.apib
-adUnitsPreRolls.apib
+adUnitsMetaTags.apib
+adUnitsPostRoll.apib
+adUnitsPreRoll.apib
 adUnitsRating.apib
 adUnitsStatus.apib
 adUnitsVideo.apib
