@@ -1,0 +1,79 @@
+# Group AdUnits/Rating
+The Rating of a AdUnit can be accessed and updated here.
+
+## Rating [/adUnits/:id/rating/?include=includes]
+Get the Rating that the AdUnit is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+
+### Retrieve the Rating for a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+            { 
+            data : {
+                modified_by: null
+                name: "PG"
+                minimum_age: 10
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "Rating"
+                version: 1
+                modifier: null
+                id: 1
+                }
+            }
+
+## Rating [/adUnits/:id/rating/:subid/?include=includes]
+Get the Rating that the adUnit is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the Rating to perform action with. Has example value.
+
+### Retrieve a Rating by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "PG"
+                  minimum_age: 10
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Rating"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+
+### Change the Rating that a AdUnit uses [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "PG"
+                  minimum_age: 10
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Rating"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
+
+### Remove a Rating from a AdUnit [DELETE]
+
++ Response 200

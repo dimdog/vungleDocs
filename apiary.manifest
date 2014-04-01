@@ -9,6 +9,9 @@ adGroupsPlatformVersions.apib
 adGroupsRating.apib
 adGroupsSiteIDLists.apib
 adGroupsStatus.apib
+adUnitsLanguage.apib
+adUnitsRating.apib
+adUnitsStatus.apib
 auth.apib
 bidStrategy.apib
 campaigns.apib
