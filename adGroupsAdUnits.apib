@@ -1,0 +1,130 @@
+# Group AdGroups/AdUnits
+AdUnits can be accessed and updated here.
+
+## AdUnits Collection [/adGroups/:id/adUnits/?include=includes]
+Get all AdUnits that are part of a AdGroup 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `video`, `postRoll`, `preRoll`, `rating`, `metaTags`, `tpats`, `adGroups`, `demandAccount`, `language`, `category`, or `all` 
+
+### Retrieve all AdUnits for a AdGroup [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    data: {
+                      modified_by: null
+                      name: "AdUnit1"
+                      language_id: 5
+                      demandAccount_id: 1
+                      video_id: 754
+                      postRoll_id: 5
+                      preRoll_id : 15
+                      rating_id: 10
+                      category_id: 3
+                      app_id : "com.android.reversedurl.longstring" 
+                      frequency_cap: 10
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "AdUnit"
+                      version: 1
+                      modifier: null
+                      id: 1
+                    }
+                },
+                {
+                    data: {
+                      modified_by: null
+                      name: "AdUnit2"
+                      language_id: 5
+                      demandAccount_id: 1
+                      video_id: 754
+                      postRoll_id: 10
+                      preRoll_id : 15
+                      rating_id: 10
+                      category_id: 3
+                      app_id : "com.android.reversedurl.longstring" 
+                      frequency_cap: 10
+                      created_at: "2014-03-25T21:30:42+00:00"
+                      updated_at: "2014-03-25T21:30:42+00:00"
+                      class: "AdUnit"
+                      version: 1
+                      modifier: null
+                      id: 2
+                    }
+                }
+            ]
+
+## AdUnit [/adGroups/:id/adUnits/:subid/?include=includes]
+Get a AdUnit that is associated with a AdGroup by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `video`, `postRoll`, `preRoll`, `rating`, `metaTags`, `tpats`, `adGroups`, `demandAccount`, `language`, `category`, or `all` 
+
+### Retrieve a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "AdUnit2"
+                  language_id: 5
+                  demandAccount_id: 1
+                  video_id: 754
+                  postRoll_id: 10
+                  preRoll_id : 15
+                  rating_id: 10
+                  category_id: 3
+                  app_id : "com.android.reversedurl.longstring" 
+                  frequency_cap: 10
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "AdUnit"
+                  version: 5
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Attach A AdUnit to a AdGroup [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "AdUnit2"
+                  language_id: 5
+                  demandAccount_id: 1
+                  video_id: 754
+                  postRoll_id: 10
+                  preRoll_id : 15
+                  rating_id: 10
+                  category_id: 3
+                  app_id : "com.android.reversedurl.longstring" 
+                  frequency_cap: 10
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "AdUnit"
+                  version: 5
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove a AdUnit from a AdGroup [DELETE]
+
++ Response 200

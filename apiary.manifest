@@ -1,4 +1,5 @@
 header.apib
+adGroupsAdUnits.apib
 adGroupsCategories.apib
 adGroupsConnectionTypes.apib
 adGroupsDevices.apib
@@ -9,6 +10,7 @@ adGroupsPlatformVersions.apib
 adGroupsRating.apib
 adGroupsSiteIDLists.apib
 adGroupsStatus.apib
+adUnits.apib
 adUnitsCategory.apib
 adUnitsLanguage.apib
 adUnitsMetaTags.apib
@@ -20,6 +22,7 @@ adUnitsVideo.apib
 auth.apib
 bidStrategy.apib
 campaigns.apib
+campaignsAdGroups.apib
 campaignsGeoGroups.apib
 campaignsPlatformVersions.apib
 campaignsDevices.apib

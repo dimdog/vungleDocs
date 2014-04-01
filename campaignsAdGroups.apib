@@ -1,0 +1,126 @@
+# Group Campaigns/AdGroups
+AdGroups for a Campaign can be accessed and created here. 
+
+## AdGroups Collection [/campaigns/:id/adGroups/?include=includes]
+Get all the AdGroups under a Campaign 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `campaign`, `isuLists`, `siteIDLists`, `categories`, `connectionTypes`, `devices`, `platformVersions`, `geoGroups`, `adWindows`, `languages`, `ratings`, `adUnits` 
+
+### Retrieve all AdGroups for a Campaign [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            [
+                {
+                    data: {
+                      impression_cap: 500
+                      budget_cap: 10
+                      name: "AdGroup1"
+                      end_date: "2014-04-01T15:52:21+00:00"
+                      updated_at: "2014-04-01T15:52:21+00:00"
+                      created_at: "2014-04-01T15:52:21+00:00"
+                      budget: 8000
+                      class: "AdGroup"
+                      geo_groups_whitelisted: true
+                      version: 1
+                      start_date: "2014-04-01T15:52:21+00:00"
+                      modified_by: null
+                      bid_price: 8
+                      modifier: null
+                      id: 1
+                      budget_spent: 0
+                      campaign_id: 5
+                    }
+                },
+                {
+                    data: {
+                      impression_cap: 500
+                      budget_cap: 10
+                      name: "AdGroup2"
+                      end_date: "2014-04-01T15:52:21+00:00"
+                      updated_at: "2014-04-01T15:52:21+00:00"
+                      created_at: "2014-04-01T15:52:21+00:00"
+                      budget: 8000
+                      class: "AdGroup"
+                      geo_groups_whitelisted: true
+                      version: 1
+                      start_date: "2014-04-01T15:52:21+00:00"
+                      modified_by: null
+                      bid_price: 8
+                      modifier: null
+                      id: 2
+                      budget_spent: 0
+                      campaign_id: 5
+                    }
+                }
+            ]
+
+### Create An AdGroup for a Campaign [POST]
+
+
++ Request (application/json)
+
+        {
+            data: {
+               name: "New AdGroup" 
+               bid_price: 1
+            }
+        }
+
++ Response 200 (application/json)
+
+        {
+            data: {
+              impression_cap: null
+              budget_cap: null
+              name: "New AdGroup"
+              end_date: "2014-04-01T15:52:21+00:00"
+              updated_at: "2014-04-01T15:52:21+00:00"
+              created_at: "2014-04-01T15:52:21+00:00"
+              budget: null
+              class: "AdGroup"
+              geo_groups_whitelisted: true
+              version: 1
+              start_date: "2014-04-01T15:52:21+00:00"
+              modified_by: null
+              bid_price: 1
+              modifier: null
+              id: 2
+              budget_spent: 0
+              campaign_id: :id
+            }
+        }
+
+## AdGroup [/campaigns/:id/adGroups/:subid?include=includes]
+Get a single AdGroup object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `campaign`, `isuLists`, `siteIDLists`, `categories`, `connectionTypes`, `devices`, `platformVersions`, `geoGroups`, `adWindows`, `languages`, `ratings`, `adUnits` 
+
+### Retrieve a specific AdGroups for a Campaign by ID [GET]
++ Response 200 (application/json)
+
+        {
+            data: {
+              impression_cap: null
+              budget_cap: null
+              name: "New AdGroup"
+              end_date: "2014-04-01T15:52:21+00:00"
+              updated_at: "2014-04-01T15:52:21+00:00"
+              created_at: "2014-04-01T15:52:21+00:00"
+              budget: null
+              class: "AdGroup"
+              geo_groups_whitelisted: true
+              version: 1
+              start_date: "2014-04-01T15:52:21+00:00"
+              modified_by: null
+              bid_price: 1
+              modifier: null
+              id: 2
+              budget_spent: 0
+              campaign_id: :id
+            }
+        }
