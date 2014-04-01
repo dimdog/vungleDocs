@@ -46,6 +46,7 @@ geoGroups.apib
 geoGroupsCities.apib
 geoGroupsCountries.apib
 geoGroupsProvinces.apib
+ISULists.apib
 languages.apib
 metaTags.apib
 metaTagsMetaTags.apib
@@ -54,9 +55,14 @@ oemsDevices.apib
 platforms.apib
 platformsPlatformVersions.apib
 platformVersions.apib
+postRolls.apib
+preRolls.apib
 provinces.apib
 provincesCities.apib
 ratings.apib
+siteIDLists.apib
 statuses.apib
 users.apib
 usersDemandAccounts.apib
+videos.apib
+
