@@ -1,0 +1,79 @@
+# Group AdUnits/PreRoll
+The PreRoll of a AdUnit can be accessed and updated here.
+
+## PreRoll [/adUnits/:id/preRoll/?include=includes]
+Get the PreRoll that the AdUnit is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+
+### Retrieve the PreRoll for a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+            { 
+            data : {
+                modified_by: null
+                name: "PreRoll1"
+                url: "http://path.to/resource"
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "PreRoll"
+                version: 1
+                modifier: null
+                id: :subid
+                }
+            }
+
+## PreRoll [/adUnits/:id/preRoll/:subid/?include=includes]
+Get the PreRoll that the adUnit is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the PreRoll to perform action with. Has example value.
+
+### Retrieve a PreRoll by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "PreRoll1"
+                  url: "http://path.to/resource"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PreRoll"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Change the PreRoll that a AdUnit uses [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "PreRoll1"
+                  url: "http://path.to/resource"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PreRoll"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove a PreRoll from a AdUnit [DELETE]
+
++ Response 200

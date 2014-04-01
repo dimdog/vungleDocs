@@ -1,0 +1,79 @@
+# Group AdUnits/PostRoll
+The PostRoll of a AdUnit can be accessed and updated here.
+
+## PostRoll [/adUnits/:id/postRoll/?include=includes]
+Get the PostRoll that the AdUnit is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+
+### Retrieve the PostRoll for a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+            { 
+            data : {
+                modified_by: null
+                name: "PostRoll1"
+                url: "http://path.to/resource"
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "PostRoll"
+                version: 1
+                modifier: null
+                id: :subid
+                }
+            }
+
+## PostRoll [/adUnits/:id/postRoll/:subid/?include=includes]
+Get the PostRoll that the adUnit is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the PostRoll to perform action with. Has example value.
+
+### Retrieve a PostRoll by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "PostRoll1"
+                  url: "http://path.to/resource"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PostRoll"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Change the PostRoll that a AdUnit uses [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "PostRoll1"
+                  url: "http://path.to/resource"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "PostRoll"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove a PostRoll from a AdUnit [DELETE]
+
++ Response 200

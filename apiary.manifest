@@ -10,8 +10,11 @@ adGroupsRating.apib
 adGroupsSiteIDLists.apib
 adGroupsStatus.apib
 adUnitsLanguage.apib
+adUnitsPostRolls.apib
+adUnitsPreRolls.apib
 adUnitsRating.apib
 adUnitsStatus.apib
+adUnitsVideo.apib
 auth.apib
 bidStrategy.apib
 campaigns.apib

@@ -1,0 +1,79 @@
+# Group AdUnits/Video
+The Video of a AdUnit can be accessed and updated here.
+
+## Video [/adUnits/:id/video/?include=includes]
+Get the Video that the AdUnit is using 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+
+### Retrieve the Video for a AdUnit [GET]
++ Response 200 (application/json)
+
+    + Body
+            { 
+            data : {
+                modified_by: null
+                name: "Video1"
+                url: "http://path.to/resource"
+                created_at: "2014-03-25T21:30:42+00:00"
+                updated_at: "2014-03-25T21:30:42+00:00"
+                class: "Video"
+                version: 1
+                modifier: null
+                id: :subid
+                }
+            }
+
+## Video [/adUnits/:id/video/:subid/?include=includes]
+Get the Video that the adUnit is using by ID 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
+    + subid (required, number, `1`) ... Numeric `id` of the Video to perform action with. Has example value.
+
+### Retrieve a Video by ID [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  name: "Video1"
+                  url: "http://path.to/resource"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Video"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Change the Video that a AdUnit uses [POST]
+
+
++ Request (application/json)
+
+        {
+        }
+
++ Response 200 (application/json)
+
+    + Body
+            {
+                data: {
+                  modified_by: null
+                  name: "Video1"
+                  url: "http://path.to/resource"
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "Video"
+                  version: 1
+                  modifier: null
+                  id: :subid
+                }
+            }
+
+### Remove a Video from a AdUnit [DELETE]
+
++ Response 200
