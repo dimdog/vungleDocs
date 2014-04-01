@@ -12,6 +12,7 @@ adGroupsRating.apib
 adGroupsSiteIDLists.apib
 adGroupsStatus.apib
 adUnits.apib
+adUnitsAdGroups.apib
 adUnitsCategory.apib
 adUnitsLanguage.apib
 adUnitsMetaTags.apib
