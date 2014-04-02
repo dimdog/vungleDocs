@@ -9,9 +9,9 @@ Get all AdUnits that are part of a AdGroup
 
     + Body
 
-            [
-                {
-                    data: {
+            {
+                data : [ 
+                      {
                       modified_by: null
                       name: "AdUnit1"
                       language_id: 5
@@ -29,10 +29,8 @@ Get all AdUnits that are part of a AdGroup
                       version: 1
                       modifier: null
                       id: 1
-                    }
-                },
-                {
-                    data: {
+                      },
+                      {
                       modified_by: null
                       name: "AdUnit2"
                       language_id: 5
@@ -51,8 +49,8 @@ Get all AdUnits that are part of a AdGroup
                       modifier: null
                       id: 2
                     }
-                }
-            ]
+                ]
+            }
 
 ## AdUnit [/adGroups/:id/adUnits/:subid/?include=includes]
 Get a AdUnit that is associated with a AdGroup by ID 

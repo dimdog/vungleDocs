@@ -9,9 +9,9 @@ Get all AdUnits that are associated with a DemandAccount
 
     + Body
 
-            [
-                {
-                    data: {
+            {
+                data : [ 
+                      {
                       modified_by: null
                       name: "AdUnit1"
                       language_id: 5
@@ -29,10 +29,8 @@ Get all AdUnits that are associated with a DemandAccount
                       version: 1
                       modifier: null
                       id: 1
-                    }
-                },
-                {
-                    data: {
+                      },
+                      {
                       modified_by: null
                       name: "AdUnit2"
                       language_id: 5
@@ -51,8 +49,8 @@ Get all AdUnits that are associated with a DemandAccount
                       modifier: null
                       id: 2
                     }
-                }
-            ]
+                ]
+            }
 
 ### Create A AdUnit [POST]
 

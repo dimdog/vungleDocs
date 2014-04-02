@@ -10,9 +10,9 @@ Platforms can be accessed here, and admins can update / add new ones.
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "iOS"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -21,10 +21,8 @@ Platforms can be accessed here, and admins can update / add new ones.
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Android"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -34,8 +32,8 @@ Platforms can be accessed here, and admins can update / add new ones.
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Platform [/platforms/id?include=includes]
 Get a single Platform object 

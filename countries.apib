@@ -12,9 +12,9 @@ Countries can have provinces as part of them
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "Union of Soviet Socialist Republics"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -23,10 +23,8 @@ Countries can have provinces as part of them
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "United States of America"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -36,8 +34,8 @@ Countries can have provinces as part of them
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Country [/countries/id?include=includes]
 Get a single Country object 

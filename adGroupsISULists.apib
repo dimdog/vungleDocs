@@ -7,9 +7,9 @@ Get all ISULists that are part of a AdGroup
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "My List 1"
                     url: "http://my.list.com/resource"
@@ -19,10 +19,8 @@ Get all ISULists that are part of a AdGroup
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "My List 2"
                     url: "http://my.list.com/resource"
@@ -33,8 +31,8 @@ Get all ISULists that are part of a AdGroup
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
 
 ## ISUList [/adGroups/:id/isuLists/:subid/?include=includes]
 Get a ISULists that is associated with a AdGroup 

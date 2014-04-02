@@ -10,9 +10,9 @@ Devices can be accessed here, and admins can update / add new ones.
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "iPhone 5"
                     is_phone: true
@@ -29,10 +29,8 @@ Devices can be accessed here, and admins can update / add new ones.
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Galaxy Note"
                     is_phone: false
@@ -50,8 +48,8 @@ Devices can be accessed here, and admins can update / add new ones.
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Device [/devices/id?include=includes]
 Get a single Device object 

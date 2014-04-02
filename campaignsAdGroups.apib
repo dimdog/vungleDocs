@@ -9,9 +9,9 @@ Get all the AdGroups under a Campaign
 
     + Body
 
-            [
-                {
-                    data: {
+            {
+                data : [ 
+                      {
                       impression_cap: 500
                       budget_cap: 10
                       name: "AdGroup1"
@@ -29,10 +29,8 @@ Get all the AdGroups under a Campaign
                       id: 1
                       budget_spent: 0
                       campaign_id: 5
-                    }
-                },
-                {
-                    data: {
+                      },
+                      {
                       impression_cap: 500
                       budget_cap: 10
                       name: "AdGroup2"
@@ -51,8 +49,8 @@ Get all the AdGroups under a Campaign
                       budget_spent: 0
                       campaign_id: 5
                     }
-                }
-            ]
+                ]
+            }
 
 ### Create An AdGroup for a Campaign [POST]
 

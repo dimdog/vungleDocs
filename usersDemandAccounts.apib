@@ -7,9 +7,10 @@ Allows you to get all demandAccounts associated with a user, and also to modify 
 ### List all of a User's  DemandAccounts [GET]
 + Response 200 (application/json)
 
-        [
-            {
-                data : {
+
+        {
+            data : [ 
+                    {
                     geo_targetting: true
                     mailing_address: "My Mailing Address"
                     updated_at: "2014-03-12T20:48:32+00:00"
@@ -34,26 +35,8 @@ Allows you to get all demandAccounts associated with a user, and also to modify 
                     created_at: "2014-03-12T20:48:32+00:00"
                     spent_credit: 500
                     modifier: null
-                },
-                permissions: {
-                    financial_write: true
-                    user_id: :id
-                    financial_read: true
-                    read: true
-                    created_at: "2014-03-27T17:50:30+00:00"
-                    updated_at: "2014-03-27T17:50:30+00:00"
-                    write: false
-                    manager: true
-                    version: 1
-                    modified_by: null
-                    modifier: null
-                    reports_read: true
-                    class: "UserDemandAccounts"
-                    demandAccount_id: 1
-                }
-            },
-            {
-                data : {
+                    },
+                    {
                     geo_targetting: false
                     mailing_address: "Need a value"
                     updated_at: "2014-03-12T20:48:32+00:00"
@@ -78,8 +61,26 @@ Allows you to get all demandAccounts associated with a user, and also to modify 
                     created_at: "2014-03-12T20:48:32+00:00"
                     spent_credit: null
                     modifier: null
-                },
-                permissions : {
+                    }
+            ]
+            permissions: [
+                    {
+                    financial_write: true
+                    user_id: :id
+                    financial_read: true
+                    read: true
+                    created_at: "2014-03-27T17:50:30+00:00"
+                    updated_at: "2014-03-27T17:50:30+00:00"
+                    write: false
+                    manager: true
+                    version: 1
+                    modified_by: null
+                    modifier: null
+                    reports_read: true
+                    class: "UserDemandAccounts"
+                    demandAccount_id: 1
+                    },
+                    {
                     financial_write: true
                     user_id: :id
                     financial_read: true
@@ -94,9 +95,9 @@ Allows you to get all demandAccounts associated with a user, and also to modify 
                     reports_read: true
                     class: "UserDemandAccounts"
                     demandAccount_id: 2
-                }
-            }
-        ]
+                    }
+            ]
+        }
 
 ## Demand Accounts Create [/users/:id/demandAccounts]
 ### Create a DemandAccount for a User [POST]

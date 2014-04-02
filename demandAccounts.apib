@@ -8,9 +8,9 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
 ### List all Demand Accounts [GET]
 + Response 200 (application/json)
 
-        [
             {
-                data: {
+                data : [ 
+                    {
                     geo_targetting: true
                     mailing_address: "My Mailing Address"
                     updated_at: "2014-03-12T20:48:32+00:00"
@@ -35,10 +35,8 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
                     created_at: "2014-03-12T20:48:32+00:00"
                     spent_credit: 500
                     modifier: null
-                }
-            },
-            {
-                data: {
+                    },
+                    {
                     geo_targetting: false
                     mailing_address: "Need a value"
                     updated_at: "2014-03-12T20:48:32+00:00"
@@ -63,9 +61,9 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
                     created_at: "2014-03-12T20:48:32+00:00"
                     spent_credit: null
                     modifier: null
-                }
+                    }
+                ]
             }
-        ]
 
 ## DemandAccounts [/demandAccounts/id?include=includes&limit=limit]
 Get a single DemandAccount object 

@@ -8,32 +8,32 @@ Get all PlatformVersions that are part of a AdGroup
 + Response 200 (application/json)
 
     + Body
-            [
-                {
-                    data: {
-                      modified_by: null
-                      platform_version: 7
-                      platform_id: 1
-                      created_at: "2014-03-25T21:30:42+00:00"
-                      updated_at: "2014-03-25T21:30:42+00:00"
-                      class: "PlatformVersion"
-                      version: 1
-                      modifier: null
-                      id: 1
+            {
+                data : [ 
+                    {
+                    modified_by: null
+                    platform_version: 7
+                    platform_id: 1
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "PlatformVersion"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    },
+                    {
+                    modified_by: null
+                    platform_version: 7.1
+                    platform_id: 1
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "PlatformVersion"
+                    version: 1
+                    modifier: null
+                    id: 2
                     }
-                },
-                    data: {
-                      modified_by: null
-                      platform_version: 7.1
-                      platform_id: 1
-                      created_at: "2014-03-25T21:30:42+00:00"
-                      updated_at: "2014-03-25T21:30:42+00:00"
-                      class: "PlatformVersion"
-                      version: 1
-                      modifier: null
-                      id: 2
-                    }
-            ]
+                ]   
+            }
 
 ## PlatformVersion [/adGroups/:id/platformVersions/:subid/?include=includes]
 Get a PlatformVersions that is associated with a AdGroup 

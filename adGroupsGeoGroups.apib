@@ -8,9 +8,9 @@ Get all GeoGroups that are part of a AdGroup
 + Response 200 (application/json)
 
     + Body
-            [
-                {
-                    data: {
+            {
+                data : [ 
+                      {
                       modified_by: null
                       name: "USA + UK"
                       demandAccount_id: 4
@@ -20,9 +20,8 @@ Get all GeoGroups that are part of a AdGroup
                       version: 1
                       modifier: null
                       id: 1
-                    }
-                },
-                    data: {
+                      },
+                      {
                       modified_by: null
                       name: "APAC"
                       demandAccount_id: 4
@@ -32,8 +31,9 @@ Get all GeoGroups that are part of a AdGroup
                       version: 1
                       modifier: null
                       id: 2
-                    }
-            ]
+                      }
+                ] 
+            }
 
 ## GeoGroup [/adGroups/:id/geoGroups/:subid/?include=includes]
 Get a GeoGroups that is associated with a AdGroup 

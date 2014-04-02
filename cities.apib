@@ -12,9 +12,9 @@ Cities must be part of a Province.
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "New York City"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -24,10 +24,8 @@ Cities must be part of a Province.
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Albaquerque"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -38,8 +36,8 @@ Cities must be part of a Province.
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## City [/cities/id?include=includes]
 Get a single City object 

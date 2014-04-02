@@ -10,9 +10,9 @@ PlatformVersions can be accessed here, and admins can update / add new ones.
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     platform_version: 7
                     platform_id: 1
@@ -22,10 +22,8 @@ PlatformVersions can be accessed here, and admins can update / add new ones.
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     platform_version: 2.2
                     platform_id: 2
@@ -36,8 +34,8 @@ PlatformVersions can be accessed here, and admins can update / add new ones.
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## PlatformVersion [/platformVersions/id?include=includes]
 Get a single PlatformVersion object 

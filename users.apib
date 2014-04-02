@@ -14,9 +14,9 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     username: "vungle"
                     first_name: "I'm a"
                     last_name: "Computer"
@@ -27,10 +27,8 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
                     version: 1
                     is_admin: true
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     username: "potatoes"
                     first_name: "I'm a"
                     last_name: "potato"
@@ -42,8 +40,8 @@ Users! This is an Admin-Only endpoint except for PATCH to yourself.
                     is_admin: False
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 
 

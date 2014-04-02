@@ -9,9 +9,9 @@ Get all GeoGroups that are associated with a DemandAccount
 
     + Body
 
-            [
-                {
-                    data: {
+            {
+                data : [ 
+                      {
                       modified_by: null
                       name: "USA + UK"
                       demandAccount_id: 1
@@ -21,10 +21,8 @@ Get all GeoGroups that are associated with a DemandAccount
                       version: 1
                       modifier: null
                       id: 1
-                    }
-                },
-                {
-                    data: {
+                      },
+                      {
                       modified_by: null
                       name: "APAC"
                       demandAccount_id: 1
@@ -35,8 +33,8 @@ Get all GeoGroups that are associated with a DemandAccount
                       modifier: null
                       id: 2
                     }
-                }
-            ]
+                ]
+            }
 
 ### Create A GeoGroup [POST]
 

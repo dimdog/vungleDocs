@@ -8,9 +8,9 @@
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "United States"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -19,10 +19,8 @@
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "France"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -32,8 +30,8 @@
                     modifier: null 
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Country [/geoGroups/:id/countries/:subid?include=includes]
 Get a single Country on a geoGroup object 

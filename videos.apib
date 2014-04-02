@@ -10,9 +10,9 @@ Videos can be accessed here. Admins can see all, users can see, edit, and delete
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "Video 1"
                     url: "http://path.to/resource"
@@ -23,10 +23,8 @@ Videos can be accessed here. Admins can see all, users can see, edit, and delete
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Video 1"
                     url: "http://path.to/resource"
@@ -38,8 +36,8 @@ Videos can be accessed here. Admins can see all, users can see, edit, and delete
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Video [/videos/id?include=includes]
 Get a single Video object 

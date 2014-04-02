@@ -9,9 +9,9 @@ Devices for a specific OEM can be accessed here.
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "iPhone 5"
                     is_phone: true
@@ -28,10 +28,8 @@ Devices for a specific OEM can be accessed here.
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "iPad"
                     is_phone: false
@@ -49,8 +47,8 @@ Devices for a specific OEM can be accessed here.
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Device [/oems/:id/devices/:subid?include=includes]
 Get a single Device object for a single OEM 

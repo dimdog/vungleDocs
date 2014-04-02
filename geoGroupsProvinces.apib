@@ -8,9 +8,9 @@
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "New York"
                     country_id: 1
@@ -20,10 +20,8 @@
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Normandy"
                     country_id: 8
@@ -34,8 +32,8 @@
                     modifier: null 
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Province [/geoGroups/:id/provinces/:subid?include=includes]
 Get a single Province on a geoGroup object 

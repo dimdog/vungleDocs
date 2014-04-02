@@ -9,9 +9,9 @@ Get all ISULists that are associated with a DemandAccount
 
     + Body
 
-            [
-                {
-                    data: {
+            {
+                data : [ 
+                      {
                       modified_by: null
                       name: "ISUList1"
                       url: "http://url.com"
@@ -22,10 +22,8 @@ Get all ISULists that are associated with a DemandAccount
                       version: 1
                       modifier: null
                       id: 1
-                    }
-                },
-                {
-                    data: {
+                      },
+                      {
                       modified_by: null
                       name: "ISUList2"
                       url: "http://url.com"
@@ -37,8 +35,8 @@ Get all ISULists that are associated with a DemandAccount
                       modifier: null
                       id: 2
                     }
-                }
-            ]
+                ]
+            }
 
 ### Create A ISUList [POST]
 

@@ -8,9 +8,9 @@ Get all Devices that are part of a AdGroup
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+           {
+                data : [ 
+                    {
                     modified_by: null
                     name: "iPhone 5"
                     is_phone: true
@@ -27,10 +27,8 @@ Get all Devices that are part of a AdGroup
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Galaxy Note"
                     is_phone: false
@@ -48,8 +46,8 @@ Get all Devices that are part of a AdGroup
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
 
 ## Device [/adGroups/:id/devices/:subid/?include=includes]
 Get a Devices that is associated with a AdGroup 

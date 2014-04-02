@@ -10,9 +10,9 @@ PreRolls can be accessed here. Admins can see all, users can see, edit, and dele
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "PreRoll 1"
                     url: "http://path.to/resource"
@@ -23,10 +23,8 @@ PreRolls can be accessed here. Admins can see all, users can see, edit, and dele
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "PreRoll 1"
                     url: "http://path.to/resource"
@@ -38,8 +36,8 @@ PreRolls can be accessed here. Admins can see all, users can see, edit, and dele
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## PreRoll [/preRolls/id?include=includes]
 Get a single PreRoll object 

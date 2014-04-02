@@ -12,9 +12,9 @@ Provinces can have cities under them, and must be part of a Country
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+            {
+                data : [ 
+                    {
                     modified_by: null
                     name: "New York State"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -24,10 +24,8 @@ Provinces can have cities under them, and must be part of a Country
                     version: 1
                     modifier: null
                     id: 1
-                    }
-                },
-                {
-                 data : {
+                    },
+                    {
                     modified_by: null
                     name: "Arizona"
                     created_at: "2014-03-25T21:30:42+00:00"
@@ -38,8 +36,8 @@ Provinces can have cities under them, and must be part of a Country
                     modifier: null
                     id: 2
                     }
-                }
-            ]
+                ]
+            }
             
 ## Province [/provinces/id?include=includes]
 Get a single Province object 

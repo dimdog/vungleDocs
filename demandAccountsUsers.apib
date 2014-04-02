@@ -9,9 +9,9 @@ Users! Here you can see users attached to a given DemandAccount, and their permi
 + Response 200 (application/json)
 
     + Body
-            [
-                { 
-                data : {
+        {
+            data : [ 
+                    {
                     username: "vungle"
                     first_name: "I'm a"
                     last_name: "Computer"
@@ -23,7 +23,21 @@ Users! Here you can see users attached to a given DemandAccount, and their permi
                     is_admin: true
                     id: 1
                     },
-                permissions: {
+                    {
+                    username: "potatoes"
+                    first_name: "I'm a"
+                    last_name: "potato"
+                    modified_by: null
+                    created_at: "2014-03-12T16:29:48+00:00"
+                    updated_at: "2014-03-12T16:29:48+00:00"
+                    class: "User"
+                    version: 1
+                    is_admin: False
+                    id: 2
+                    }
+            ]
+            permissions: [
+                    {
                     financial_write: true
                     user_id: 1
                     financial_read: true
@@ -38,22 +52,8 @@ Users! Here you can see users attached to a given DemandAccount, and their permi
                     reports_read: true
                     class: "UserDemandAccounts"
                     demandAccount_id: :id
-                    }
-                },
-                {
-                 data : {
-                    username: "potatoes"
-                    first_name: "I'm a"
-                    last_name: "potato"
-                    modified_by: null
-                    created_at: "2014-03-12T16:29:48+00:00"
-                    updated_at: "2014-03-12T16:29:48+00:00"
-                    class: "User"
-                    version: 1
-                    is_admin: False
-                    id: 2
-                    }
-                permissions: {
+                    },
+                    {
                     financial_write: true
                     user_id: 2
                     financial_read: true
@@ -69,8 +69,8 @@ Users! Here you can see users attached to a given DemandAccount, and their permi
                     class: "UserDemandAccounts"
                     demandAccount_id: :id
                     }
-                }
             ]
+        }
             
 
 
