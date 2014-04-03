@@ -23,6 +23,8 @@ Get all AdUnits that are associated with a DemandAccount
                       category_id: 3
                       app_id : "com.android.reversedurl.longstring" 
                       frequency_cap: 10
+                      daily_cap: 5
+                      destination_url: "http://path.to.store"
                       created_at: "2014-03-25T21:30:42+00:00"
                       updated_at: "2014-03-25T21:30:42+00:00"
                       class: "AdUnit"
@@ -42,6 +44,8 @@ Get all AdUnits that are associated with a DemandAccount
                       category_id: 3
                       app_id : "com.android.reversedurl.longstring" 
                       frequency_cap: 10
+                      daily_cap: 5
+                      destination_url: "http://path.to.store"
                       created_at: "2014-03-25T21:30:42+00:00"
                       updated_at: "2014-03-25T21:30:42+00:00"
                       class: "AdUnit"
@@ -60,7 +64,7 @@ Get all AdUnits that are associated with a DemandAccount
         {
             data: {
                name: "Anglophones" 
-               post_back_url: "http://path.to.server.com"
+               destination_url: "http://path.to.server.com"
                frequency_cap: 10
             }
         }
@@ -71,7 +75,7 @@ Get all AdUnits that are associated with a DemandAccount
             data: {
               modified_by: null
               name: "Anglophones"
-              post_back_url: "http://path.to.server.com"
+              destination_url: "http://path.to.server.com"
               language_id: null
               demandAccount_id: :id
               video_id: null
@@ -81,6 +85,7 @@ Get all AdUnits that are associated with a DemandAccount
               category_id: null
               app_id : "com.android.reversedurl.longstring" 
               frequency_cap: 10
+              daily_cap: null
               created_at: "2014-03-25T21:30:42+00:00"
               updated_at: "2014-03-25T21:30:42+00:00"
               class: "AdUnit"
