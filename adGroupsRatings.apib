@@ -1,28 +1,41 @@
-## Rating [/adGroups/:id/rating/?include=includes]
-Get the Rating that the AdGroup is using 
+## Ratings Collection [/adGroups/:id/ratings/?include=includes]
+Get all Ratings that are part of a AdGroup 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
 
-### Retrieve the Rating for a AdGroup [GET]
+### Retrieve all Ratings for a AdGroup [GET]
 + Response 200 (application/json)
 
     + Body
-            { 
-            data : {
-                modified_by: null
-                name: "PG"
-                minimum_age: 10
-                created_at: "2014-03-25T21:30:42+00:00"
-                updated_at: "2014-03-25T21:30:42+00:00"
-                class: "Rating"
-                version: 1
-                modifier: null
-                id: 1
-                }
+             {
+                data : [ 
+                    {
+                    modified_by: null
+                    name: "PG"
+                    minimum_age: 10
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Rating"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    },
+                    {
+                    modified_by: null
+                    name: "G"
+                    minimum_age: 5
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Rating"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                ]
             }
 
-## Rating [/adGroups/:id/rating/:subid/?include=includes]
-Get the Rating that the adGroup is using by ID 
+## Rating [/adGroups/:id/ratings/:subid/?include=includes]
+Get a Rating that the adGroup is using by ID 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
     + subid (required, number, `1`) ... Numeric `id` of the Rating to perform action with. Has example value.
@@ -46,7 +59,7 @@ Get the Rating that the adGroup is using by ID
                 }
             }
 
-### Change the Rating that a AdGroup uses [POST]
+### Add a new Rating for the AdGroup to use [POST]
 
 
 + Request (application/json)

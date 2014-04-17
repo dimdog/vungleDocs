@@ -1,28 +1,41 @@
-## Language [/adGroups/:id/language/?include=includes]
-Get the Language that the AdGroup is using 
+## Languages Collection [/adGroups/:id/languages/?include=includes]
+Get all Languages that are part of a AdGroup 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
 
-### Retrieve the Language for a AdGroup [GET]
+### Retrieve all Languages for a AdGroup [GET]
 + Response 200 (application/json)
 
     + Body
-            { 
-            data : {
-                modified_by: null
-                name: "English"
-                language_code: "EN"
-                created_at: "2014-03-25T21:30:42+00:00"
-                updated_at: "2014-03-25T21:30:42+00:00"
-                class: "Language"
-                version: 1
-                modifier: null
-                id: 1
-                }
+             {
+                data : [ 
+                    {
+                    modified_by: null
+                    name: "English"
+                    language_code: "EN"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Language"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    },
+                    {
+                    modified_by: null
+                    name: "Spanish"
+                    language_code: "ES"
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "Language"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                ]
             }
 
-## Language [/adGroups/:id/language/:subid/?include=includes]
-Get the Language that the adGroup is using by ID 
+## Language [/adGroups/:id/languages/:subid/?include=includes]
+Get a Language that the adGroup is using by ID 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the AdGroup to perform action with. Has example value.
     + subid (required, number, `1`) ... Numeric `id` of the Language to perform action with. Has example value.
@@ -46,7 +59,7 @@ Get the Language that the adGroup is using by ID
                 }
             }
 
-### Change the Language that a AdGroup uses [POST]
+### Add a new Language for the AdGroup to use [POST]
 
 
 + Request (application/json)
