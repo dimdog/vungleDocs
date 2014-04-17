@@ -10,7 +10,6 @@ adGroupsLanguages.apib
 adGroupsPlatformVersions.apib
 adGroupsRatings.apib
 adGroupsSiteIDLists.apib
-adGroupsStatus.apib
 adUnits.apib
 adUnitsAdGroups.apib
 adUnitsCategory.apib
@@ -19,7 +18,6 @@ adUnitsMetaTags.apib
 adUnitsPostRoll.apib
 adUnitsPreRoll.apib
 adUnitsRating.apib
-adUnitsStatus.apib
 adUnitsVideo.apib
 auth.apib
 bidStrategy.apib
@@ -33,7 +31,6 @@ campaignsGeoGroups.apib
 campaignsLanguages.apib
 campaignsPlatformVersions.apib
 campaignsRatings.apib
-campaignsStatus.apib
 categories.apib
 categoriesCategories.apib
 cities.apib
@@ -72,7 +69,6 @@ provinces.apib
 provincesCities.apib
 ratings.apib
 siteIDLists.apib
-statuses.apib
 users.apib
 usersDemandAccounts.apib
 videos.apib
