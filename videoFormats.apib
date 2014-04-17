@@ -1,0 +1,73 @@
+# Group VideoFormats
+VideoFormats can be accessed here
+
+## VideoFormats Collection [/videoFormats?limit=limit]
++ Parameters
+    + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
+
+### Retrieve all VideoFormats [GET]
++ Response 200 (application/json)
+
+    + Body
+            {
+                data : [ 
+                    {
+                    modified_by: null
+                    device_profile: "v1/mobile/baseline"
+                    width: 600
+                    height: 400
+                    aspect_mode: "pad"
+                    quality: 2 
+                    audio_normalize: True
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "VideoFormat"
+                    version: 1
+                    modifier: null
+                    id: 1
+                    },
+                    {
+                    modified_by: null
+                    device_profile: "v1/mobile/advanced"
+                    width: 600
+                    height: 400
+                    aspect_mode: "pad"
+                    quality: 2 
+                    audio_normalize: True
+                    created_at: "2014-03-25T21:30:42+00:00"
+                    updated_at: "2014-03-25T21:30:42+00:00"
+                    class: "VideoFormat"
+                    version: 1
+                    modifier: null
+                    id: 2
+                    }
+                ]
+            }
+            
+## VideoFormat [/videoFormats/id]
+Get a single VideoFormat object 
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the VideoFormat to perform action with.
+
+### Retrieve a VideoFormat [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                data: {
+                  modified_by: null
+                  device_profile: "v1/mobile/baseline"
+                  width: 600
+                  height: 400
+                  aspect_mode: "pad"
+                  quality: 2 
+                  audio_normalize: True
+                  created_at: "2014-03-25T21:30:42+00:00"
+                  updated_at: "2014-03-25T21:30:42+00:00"
+                  class: "VideoFormat"
+                  version: 1
+                  modifier: null
+                  id: 1
+                }
+            }
