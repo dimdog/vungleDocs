@@ -4,7 +4,7 @@ Videos can be accessed here. Admins can see all, users can see, edit, and delete
 ## Videos Collection [/videos?limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `adUnits`, `demandAccount`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `adUnits`, `demandAccount`, `videoFormats`, or `all`
 
 ### Retrieve all Videos [GET]
 + Response 200 (application/json)
@@ -43,7 +43,7 @@ Videos can be accessed here. Admins can see all, users can see, edit, and delete
 Get a single Video object 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Video to perform action with. Has example value.
-    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `adUnits`, or `all`
+    + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `modifier`, `adUnits`, `demandAccount`, `videoFormats`, or `all`
 
 ### Retrieve a Video [GET]
 + Response 200 (application/json)
@@ -56,6 +56,8 @@ Get a single Video object
                   name: "Video 2"
                   url: "http://path.to/resource"
                   demandAccount_id: 5
+                  demandAccount: {}
+                  videoFormats: { { } }
                   created_at: "2014-03-25T21:30:42+00:00"
                   updated_at: "2014-03-25T21:30:42+00:00"
                   class: "Video"
