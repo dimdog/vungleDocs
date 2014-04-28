@@ -1,5 +1,22 @@
 # Group DemandAccounts
 DemandAccounts, also known as Advertiser Accounts, are the top level model on the Demand side of the Account Structure. They can be either Master accounts, sub-accounts, or agency accounts. 
+
+Editable Attributes
+
++ geo_targetting
+    + mailing_address
+    + is_agency
+    + billing_phone
+    + mailing_email 
+    + is_rtb 
+    + billing_email
+    + billing_address
+    + category_restriction
+    + approved_credit (admin only)
+    + age_restriction
+    + mailing_phone 
+    + name 
+
 ## Demand Accounts Collection [/demandAccounts?include=includes&limit=limit]
 + Parameters
     + limit (optional, number, `1`) ... Numerical `limit` to apply to how many records are returned.
@@ -18,7 +35,7 @@ DemandAccounts, also known as Advertiser Accounts, are the top level model on th
                     billing_phone: "3149355555"
                     mailing_email: "email@mailing.com"
                     modified_by: null
-                    is_rtb: true
+                    is_rtb: false
                     billing_email: "email@billing.com"
                     company_id: null
                     id: 1
@@ -86,7 +103,7 @@ Get a single DemandAccount object
                     billing_phone: "3149355555"
                     mailing_email: "email@mailing.com"
                     modified_by: null
-                    is_rtb: true
+                    is_rtb: false
                     billing_email: "email@billing.com"
                     company_id: null
                     id: 1
@@ -141,7 +158,7 @@ Get a single DemandAccount object
                     billing_phone: "3149355555"
                     mailing_email: "email@mailing.com"
                     modified_by: null
-                    is_rtb: true
+                    is_rtb: false 
                     billing_email: "email@billing.com"
                     company_id: null
                     id: 1

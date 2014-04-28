@@ -3,6 +3,16 @@ AdUnits can be accessed, updated, and deleted here.
 
 ## AdUnit [/adUnits/id?include=includes]
 Get a single AdUnit object 
+
+Editable Attributes
+
++ name
+    + frequency_cap
+    + daily_cap
+    + show_close
+    + show_countdown
+
+
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the AdUnit to perform action with. Has example value.
     + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the object. Options are: `video`, `postRoll`, `preRoll`, `rating`, `metaTags`, `tpats`, `adGroups`, `demandAccount`, `language`, `category`, or `all` 

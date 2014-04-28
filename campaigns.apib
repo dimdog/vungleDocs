@@ -3,6 +3,23 @@ Campaigns can be accessed, updated, and deleted here.
 
 ## Campaign [/campaigns/id?include=includes]
 Get a single Campaign object 
+
+Editable Attributes
+
++ name
+    + impression_cap 
+    + ratings_whitelisted
+    + languages_whitelisted
+    + categories_whitelisted
+    + type 
+    + start_date 
+    + end_date 
+    + connection_types_whitelisted
+    + geo_groups_whitelisted
+    + platform_versions_whitelisted
+    + devices_whitelisted
+    + budget 
+
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Campaign to perform action with. Has example value.
     + includes (optional, string, `'modifier'`) ... `includes` The relations that you want returned as part of the Campaign. Options are: `modifier`, `bidStrategy`, `demandAccount`, `geoGroups`, `platformVersions`, `devices`, `connectionTypes`, `categories`, `languages`, `ratings`, `adGroups`, or `all` 
